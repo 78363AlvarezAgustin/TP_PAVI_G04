@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Inmobiliaria
 {
-    public partial class AltaEdificio : Form
+    public partial class ABM_Edificio : Form
     {
-        public AltaEdificio()
+        public ABM_Edificio()
         {
             InitializeComponent();
         }
@@ -30,6 +30,7 @@ namespace Inmobiliaria
                 {
                     MessageBox.Show("Edificio Agregado Con Exito");
                     LimpiarCampos();
+                    CargarComboBarrios();
                     CargarGrilla();
                 }
                 else
@@ -41,6 +42,31 @@ namespace Inmobiliaria
 
 
         }
+
+        private void CargarComboBarrios()
+        {
+
+            try
+            {
+                
+                cmbBarrio.DataSource = AD_Edificios.ObtenerTabla("barrios");
+                cmbBarrio.DisplayMember = "n_barrio";
+                cmbBarrio.ValueMember = "id_barrio";
+                cmbBarrio.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+        }
+
+
+
+
+
         private void LimpiarCampos()
         {
             txtNombreEdificio.Text = "";
@@ -48,7 +74,6 @@ namespace Inmobiliaria
             chkAscensor.Checked = false;
             txtCalle.Text = "";
             txtNumeroCalle.Text = "";
-            txtIdBarrio.Text = "";
             txtNombreEdificio.Focus();
         }
 
@@ -69,6 +94,7 @@ namespace Inmobiliaria
 
         private void AltaEdificio_Load(object sender, EventArgs e)
         {
+            CargarComboBarrios();
             LimpiarCampos();
             CargarGrilla();
         }
@@ -88,7 +114,11 @@ namespace Inmobiliaria
             }
             ed.CalleEdificio = txtCalle.Text.Trim();
             ed.NumeroCalleEdificio = int.Parse(txtNumeroCalle.Text);
-            ed.IdBarrioEdificio = int.Parse(txtIdBarrio.Text);
+            //p.TipoDocumentoPersona = (int)cmbTdocumento.SelectedValue; //solo ej
+            ed.IdBarrioEdificio = (int)cmbBarrio.SelectedValue;
+            //ed.IdBarrioEdificio = int.Parse(txtIdBarrio.Text); //no cmb
+
+
 
             return ed;
         }
@@ -102,7 +132,7 @@ namespace Inmobiliaria
 
         private bool ValidarCamposVacios()
         {
-            if (txtCalle.Text.Equals("") || txtCantidadDptos.Text.Equals("") || txtIdBarrio.Text.Equals("") || txtNombreEdificio.Text.Equals("") || txtNumeroCalle.Text.Equals(""))
+            if (txtCalle.Text.Equals("") || txtCantidadDptos.Text.Equals("") || cmbBarrio.Text.Equals("") || txtNombreEdificio.Text.Equals("") || txtNumeroCalle.Text.Equals(""))
             {
                 MessageBox.Show("Complete todos los campos para continuar");
                 return false;
@@ -131,7 +161,9 @@ namespace Inmobiliaria
 
             txtCalle.Text = ed.CalleEdificio;
             txtNumeroCalle.Text = ed.NumeroCalleEdificio.ToString();
-            txtIdBarrio.Text = ed.IdBarrioEdificio.ToString();
+            //cmbTdocumento.SelectedValue = p.TipoDocumentoPersona;
+            cmbBarrio.SelectedValue = ed.IdBarrioEdificio;
+            //txtIdBarrio.Text = ed.IdBarrioEdificio.ToString();
 
         }
 
@@ -145,6 +177,7 @@ namespace Inmobiliaria
                 {
                     MessageBox.Show("Edificio Actualizado con exito");
                     LimpiarCampos();
+                    CargarComboBarrios();
                     CargarGrilla();
                 }
                 else
@@ -152,6 +185,7 @@ namespace Inmobiliaria
                     MessageBox.Show("Error al Actualizar Edificio");
                 }
             }
+            btnActualizarEdificio.Enabled = false;
 
         }
 

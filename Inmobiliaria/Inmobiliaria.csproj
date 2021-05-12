@@ -47,14 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccesoADatos\AD_Edificios.cs" />
-    <Compile Include="AccesoADatos\AD_Empleados.cs" />
-    <Compile Include="AltaEdificio.cs">
+    <Compile Include="ABM_Dueños.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AltaEdificio.Designer.cs">
-      <DependentUpon>AltaEdificio.cs</DependentUpon>
+    <Compile Include="ABM_Dueños.Designer.cs">
+      <DependentUpon>ABM_Dueños.cs</DependentUpon>
     </Compile>
+    <Compile Include="AccesoADatos\AD_Dueños.cs" />
+    <Compile Include="AccesoADatos\AD_Edificios.cs" />
+    <Compile Include="AccesoADatos\AD_Empleados.cs" />
+    <Compile Include="ABM_Edificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM_Edificio.Designer.cs">
+      <DependentUpon>ABM_Edificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Dueño.cs" />
     <Compile Include="Entidades\Edificio.cs" />
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="frmLogin.cs">
@@ -71,8 +79,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AltaEdificio.resx">
-      <DependentUpon>AltaEdificio.cs</DependentUpon>
+    <EmbeddedResource Include="ABM_Dueños.resx">
+      <DependentUpon>ABM_Dueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM_Edificio.resx">
+      <DependentUpon>ABM_Edificio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

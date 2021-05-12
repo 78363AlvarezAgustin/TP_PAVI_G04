@@ -13,7 +13,6 @@ C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\bin\Debug\Inmobiliaria
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\bin\Debug\Inmobiliaria.exe
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\bin\Debug\Inmobiliaria.pdb
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.csprojAssemblyReference.cache
-C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.AltaEdificio.resources
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.frmLogin.resources
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.frmPrincipal.resources
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.Properties.Resources.resources
@@ -21,3 +20,5 @@ C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.csproj.CoreCompileInputs.cache
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.exe
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.pdb
+C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.ABM_Edificio.resources
+C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.ABM_Dueños.resources
