@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Inmobiliaria.AccesoADatos
+namespace Inmobiliaria.Entidades
 {
-    class AD_Edificios
+    class Proveedor
     {
     }
 }
