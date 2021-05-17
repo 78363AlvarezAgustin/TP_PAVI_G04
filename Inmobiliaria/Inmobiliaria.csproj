@@ -326,6 +326,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmABMDueños.resx">
+      <DependentUpon>frmABMDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMEdificios.resx">
+      <DependentUpon>frmABMEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMTipoDocumento.resx">
+      <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
       <DependentUpon>frmAltaBarrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +355,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
       <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDueños.resx">
+      <DependentUpon>frmFiltroDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEdificios.resx">
+      <DependentUpon>frmFiltroEdificios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
       <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>

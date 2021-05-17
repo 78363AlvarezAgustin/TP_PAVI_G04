@@ -86,7 +86,7 @@ namespace Inmobiliaria
 
         private void aBMTIpoDocToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFiltroDocumentos ventana = new frmFiltroDocumentos();
+            frmABMTipoDocumento ventana = new frmABMTipoDocumento();
             ventana.ShowDialog();
         }
 
