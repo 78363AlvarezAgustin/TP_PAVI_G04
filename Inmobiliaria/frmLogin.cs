@@ -35,10 +35,7 @@ namespace Inmobiliaria
                     resultado = AD_Empleados.ValidarUsuario(nombreDeUsuario, password);
                     if (resultado)
                     {
-                        //frmPrincipal ventana = new frmPrincipal();
-                        //ABM_Edificio ventana = new ABM_Edificio();     //  TEST ABM EDIFICIOS
-                        //ABM_Dueños ventana = new ABM_Dueños();           //  TEST ABM DUEÑOS
-                        ABM_TipoDocumentos ventana = new ABM_TipoDocumentos();
+                        frmPrincipal ventana = new frmPrincipal();
                         ventana.Show();
                         this.Hide();
                     }

@@ -47,26 +47,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ABM_Dueños.cs">
+    <Compile Include="Formularios\ABM_Dueños.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABM_Dueños.Designer.cs">
+    <Compile Include="Formularios\ABM_Dueños.Designer.cs">
       <DependentUpon>ABM_Dueños.cs</DependentUpon>
     </Compile>
-    <Compile Include="ABM_TipoDocumentos.cs">
+    <Compile Include="Formularios\ABM_TipoDocumentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABM_TipoDocumentos.Designer.cs">
+    <Compile Include="Formularios\ABM_TipoDocumentos.Designer.cs">
       <DependentUpon>ABM_TipoDocumentos.cs</DependentUpon>
     </Compile>
     <Compile Include="AccesoADatos\AD_TipoDocumentos.cs" />
     <Compile Include="AccesoADatos\AD_Dueños.cs" />
     <Compile Include="AccesoADatos\AD_Edificios.cs" />
     <Compile Include="AccesoADatos\AD_Empleados.cs" />
-    <Compile Include="ABM_Edificio.cs">
+    <Compile Include="Formularios\ABM_Edificio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ABM_Edificio.Designer.cs">
+    <Compile Include="Formularios\ABM_Edificio.Designer.cs">
       <DependentUpon>ABM_Edificio.cs</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Dueño.cs" />
@@ -85,27 +85,27 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Alta_Dueño.cs">
+    <Compile Include="Formularios\frm_Alta_Dueño.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Alta_Dueño.Designer.cs">
+    <Compile Include="Formularios\frm_Alta_Dueño.Designer.cs">
       <DependentUpon>frm_Alta_Dueño.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Alta_Edificio.cs">
+    <Compile Include="Formularios\frm_Alta_Edificio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Alta_Edificio.Designer.cs">
+    <Compile Include="Formularios\frm_Alta_Edificio.Designer.cs">
       <DependentUpon>frm_Alta_Edificio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ABM_Dueños.resx">
+    <EmbeddedResource Include="Formularios\ABM_Dueños.resx">
       <DependentUpon>ABM_Dueños.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABM_Edificio.resx">
+    <EmbeddedResource Include="Formularios\ABM_Edificio.resx">
       <DependentUpon>ABM_Edificio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ABM_TipoDocumentos.resx">
+    <EmbeddedResource Include="Formularios\ABM_TipoDocumentos.resx">
       <DependentUpon>ABM_TipoDocumentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
@@ -114,10 +114,10 @@
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Alta_Dueño.resx">
+    <EmbeddedResource Include="Formularios\frm_Alta_Dueño.resx">
       <DependentUpon>frm_Alta_Dueño.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Alta_Edificio.resx">
+    <EmbeddedResource Include="Formularios\frm_Alta_Edificio.resx">
       <DependentUpon>frm_Alta_Edificio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
