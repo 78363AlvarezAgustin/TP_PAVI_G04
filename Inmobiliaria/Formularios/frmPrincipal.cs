@@ -71,5 +71,41 @@ namespace Inmobiliaria
             frmFiltroBarrios ventana = new frmFiltroBarrios();
             ventana.ShowDialog();
         }
+
+        private void aBMDueñosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroDueños ventana = new frmFiltroDueños();
+            ventana.ShowDialog();
+        }
+
+        private void aBMEdificiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroEdificios ventana = new frmFiltroEdificios();
+            ventana.ShowDialog();
+        }
+
+        private void aBMTIpoDocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroDocumentos ventana = new frmFiltroDocumentos();
+            ventana.ShowDialog();
+        }
+
+        private void aBMProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroProveedores ventana = new frmFiltroProveedores();
+            ventana.ShowDialog();
+        }
+
+        private void aBMProvinciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroProvincias ventana = new frmFiltroProvincias();
+            ventana.ShowDialog();
+        }
+
+        private void aBMDeptosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroDeptos ventana = new frmFiltroDeptos();
+            ventana.ShowDialog();
+        }
     }
 }
