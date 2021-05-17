@@ -71,11 +71,5 @@ namespace Inmobiliaria
             frmFiltroBarrios ventana = new frmFiltroBarrios();
             ventana.ShowDialog();
         }
-
-        private void aBMDeptosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmFiltroDeptos ventana = new frmFiltroDeptos();
-            ventana.ShowDialog();
-        }
     }
 }
