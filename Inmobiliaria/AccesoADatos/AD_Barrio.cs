@@ -36,9 +36,10 @@ namespace Inmobiliaria.AccesoADatos
                     bar.IdLocalidadBarrio = int.Parse(dr["id_localidad"].ToString());
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
+
             }
             finally
             {
