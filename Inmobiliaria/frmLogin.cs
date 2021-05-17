@@ -35,7 +35,8 @@ namespace Inmobiliaria
                     resultado = AD_Empleados.ValidarUsuario(nombreDeUsuario, password);
                     if (resultado)
                     {
-                        frmPrincipal ventana = new frmPrincipal();
+                        //frmPrincipal ventana = new frmPrincipal();
+                        ABM_Edificio ventana = new ABM_Edificio();
                         ventana.Show();
                         this.Hide();
                     }
