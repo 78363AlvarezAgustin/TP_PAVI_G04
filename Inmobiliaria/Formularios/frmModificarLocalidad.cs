@@ -173,18 +173,15 @@ namespace Inmobiliaria.Formularios
             }
             else
             {
-                if (AD_Localidades.ValidarAlRegistrar(txtNombre.Text.Trim()) == true)
+                if (txtNombre.Text.Trim().Equals("") || cmbDepartamento.Text.Equals(""))
                 {
                     MessageBox.Show("El nombre de la localidad ya existe");
-                }
-                else if (txtNombre.Text.Trim().Equals("") || cmbDepartamento.Text.Equals(""))
-                {
-                    MessageBox.Show("Por favor complete los campos que esten vacios");
                 }
                 else
                 {
                     MessageBox.Show("No se pudo cargar la localidad exitosamente");
                 }
+
             }
         }
 

@@ -205,6 +205,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formularios\ABM_Dueños.resx">
       <DependentUpon>ABM_Dueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
+      <DependentUpon>frmAltaBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaEmpleado.resx">
       <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,6 +226,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\ABM_TipoDocumentos.resx">
       <DependentUpon>ABM_TipoDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
+      <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
+      <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
     <EmbeddedResource Include="Formularios\frmFiltroEscribanos.resx">
@@ -247,6 +257,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarBarrios.resx">
+      <DependentUpon>frmModificarEliminarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarEscribano.resx">
+      <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarMoneda.resx">
+      <DependentUpon>frmModificarEliminarMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarPropiedad.resx">
+      <DependentUpon>frmModificarEliminarPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarDepartamento.resx">
+      <DependentUpon>frmModificarEliminarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEmpleado.resx">
+      <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frm_Alta_Dueño.resx">
       <DependentUpon>frm_Alta_Dueño.cs</DependentUpon>
