@@ -225,5 +225,73 @@ namespace Inmobiliaria.AccesoADatos
             return res;
         }
 
+        public static bool ExisteDueño(int nroDueño)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "GetDueñosPorDocumento";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@numeroDocumento", nroDueño);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                DataTable tabla = new DataTable();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                dataAdapter.Fill(tabla);
+                int filas = tabla.Rows.Count;
+                if (filas == 1)
+                {
+                    resultado = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return resultado;
+        }
+
+        public static bool EliminarDueño(Dueño du)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "DeleteDueño";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@numeroDocumento", du.NumeroDocumentoDueño);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return resultado;
+        }
+
     }
 }

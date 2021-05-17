@@ -132,12 +132,8 @@ namespace Inmobiliaria.AccesoADatos
 
         }
 
-        public static bool ActualizarEdificio(Edificio ed)
+        public static bool ActualizarEdificio(Edificio ed)//********************************************************************
         {
-
-            //UPDATE table_name
-            //SET column1 = value1, column2 = value2, ...
-            //WHERE condition;
 
             bool res = false;
 
@@ -147,7 +143,6 @@ namespace Inmobiliaria.AccesoADatos
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                //string consulta = "UPDATE edificios SET n_edificio = @nombreEdificio, cantidad_deptos = @cantidadDptos, tiene_ascensor = @tieneAscensor, calle = @Calle, nro_calle = @numeroCalle, id_barrio = @idBarrio WHERE n_edificio like @nombreEdificio";
                 cmd.Parameters.Clear();
 
                 cmd.Parameters.AddWithValue("@nombreEdificio", ed.NombreEdificio);
@@ -218,6 +213,114 @@ namespace Inmobiliaria.AccesoADatos
             finally
             {
                 cn.Close();
+            }
+        }
+
+        public static bool ExisteEdificio(string nombreEdificio)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "GetEdificioPorNombre";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@nombreEdificio", nombreEdificio);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                DataTable tabla = new DataTable();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
+                dataAdapter.Fill(tabla);
+                int filas = tabla.Rows.Count;
+                if (filas == 1)
+                {
+                    resultado = true;
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return resultado;
+        }
+
+
+        public static bool EliminarEdificio(Edificio ed)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "DeleteEdificio";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@nombreEdificio", ed.NombreEdificio);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return resultado;
+        }
+
+        public static DataTable GetEdificioPorNombre(string nombreEdificio)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "GetEdificioPorNombre";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@nombreEdificio", nombreEdificio);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
             }
         }
 

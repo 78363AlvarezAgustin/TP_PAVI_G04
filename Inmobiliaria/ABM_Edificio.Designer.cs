@@ -29,18 +29,7 @@ namespace Inmobiliaria
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtNombreEdificio = new System.Windows.Forms.TextBox();
-            this.txtCantidadDptos = new System.Windows.Forms.MaskedTextBox();
-            this.chkAscensor = new System.Windows.Forms.CheckBox();
-            this.txtCalle = new System.Windows.Forms.TextBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ABM_Edificio));
             this.gdrEdificios = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CantidadDptos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,123 +38,14 @@ namespace Inmobiliaria
             this.NumeroCalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdBarrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnActualizarEdificio = new System.Windows.Forms.Button();
-            this.txtNumeroCalle = new System.Windows.Forms.MaskedTextBox();
-            this.cmbBarrio = new System.Windows.Forms.ComboBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.chkMostrarTodosEdificios = new System.Windows.Forms.CheckBox();
+            this.txtNombreEdificio = new System.Windows.Forms.TextBox();
+            this.lblNombreEdificio = new System.Windows.Forms.Label();
+            this.btnAgregarEdificio = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.gdrEdificios)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(62, 109);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre del Edificio";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(192, 18);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Cantidad de Departamentos";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(128, 174);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 18);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ascensor";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(157, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(41, 18);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Calle";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(80, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 18);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Numero de Calle";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(133, 270);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 18);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "ID Barrio";
-            // 
-            // txtNombreEdificio
-            // 
-            this.txtNombreEdificio.Location = new System.Drawing.Point(205, 110);
-            this.txtNombreEdificio.Name = "txtNombreEdificio";
-            this.txtNombreEdificio.Size = new System.Drawing.Size(130, 20);
-            this.txtNombreEdificio.TabIndex = 6;
-            // 
-            // txtCantidadDptos
-            // 
-            this.txtCantidadDptos.Location = new System.Drawing.Point(204, 142);
-            this.txtCantidadDptos.Mask = "999";
-            this.txtCantidadDptos.Name = "txtCantidadDptos";
-            this.txtCantidadDptos.Size = new System.Drawing.Size(24, 20);
-            this.txtCantidadDptos.TabIndex = 7;
-            this.txtCantidadDptos.ValidatingType = typeof(int);
-            // 
-            // chkAscensor
-            // 
-            this.chkAscensor.AutoSize = true;
-            this.chkAscensor.Location = new System.Drawing.Point(205, 178);
-            this.chkAscensor.Name = "chkAscensor";
-            this.chkAscensor.Size = new System.Drawing.Size(15, 14);
-            this.chkAscensor.TabIndex = 8;
-            this.chkAscensor.UseVisualStyleBackColor = true;
-            // 
-            // txtCalle
-            // 
-            this.txtCalle.Location = new System.Drawing.Point(204, 204);
-            this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(131, 20);
-            this.txtCalle.TabIndex = 9;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(214, 318);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(91, 48);
-            this.btnAgregar.TabIndex = 12;
-            this.btnAgregar.Text = "Guardar Edificio";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnLimpiarCampos
-            // 
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(10, 318);
-            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
-            this.btnLimpiarCampos.Size = new System.Drawing.Size(89, 48);
-            this.btnLimpiarCampos.TabIndex = 13;
-            this.btnLimpiarCampos.Text = "Limpiar Campos";
-            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
-            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
             // gdrEdificios
             // 
@@ -179,10 +59,10 @@ namespace Inmobiliaria
             this.Calle,
             this.NumeroCalle,
             this.IdBarrio});
-            this.gdrEdificios.Location = new System.Drawing.Point(353, 12);
+            this.gdrEdificios.Location = new System.Drawing.Point(35, 173);
             this.gdrEdificios.Name = "gdrEdificios";
             this.gdrEdificios.ReadOnly = true;
-            this.gdrEdificios.Size = new System.Drawing.Size(524, 407);
+            this.gdrEdificios.Size = new System.Drawing.Size(527, 289);
             this.gdrEdificios.TabIndex = 14;
             this.gdrEdificios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdrEdificios_CellClick);
             // 
@@ -236,64 +116,86 @@ namespace Inmobiliaria
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Coral;
-            this.label7.Location = new System.Drawing.Point(17, 35);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(67, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 31);
             this.label7.TabIndex = 15;
             this.label7.Text = "Edificios";
             // 
-            // btnActualizarEdificio
+            // btnBuscar
             // 
-            this.btnActualizarEdificio.Enabled = false;
-            this.btnActualizarEdificio.Location = new System.Drawing.Point(110, 318);
-            this.btnActualizarEdificio.Name = "btnActualizarEdificio";
-            this.btnActualizarEdificio.Size = new System.Drawing.Size(89, 48);
-            this.btnActualizarEdificio.TabIndex = 16;
-            this.btnActualizarEdificio.Text = "Actualizar Edificio";
-            this.btnActualizarEdificio.UseVisualStyleBackColor = true;
-            this.btnActualizarEdificio.Click += new System.EventHandler(this.btnActualizarEdificio_Click);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(471, 98);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(91, 35);
+            this.btnBuscar.TabIndex = 20;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // txtNumeroCalle
+            // chkMostrarTodosEdificios
             // 
-            this.txtNumeroCalle.Location = new System.Drawing.Point(205, 244);
-            this.txtNumeroCalle.Mask = "99999";
-            this.txtNumeroCalle.Name = "txtNumeroCalle";
-            this.txtNumeroCalle.Size = new System.Drawing.Size(35, 20);
-            this.txtNumeroCalle.TabIndex = 17;
-            this.txtNumeroCalle.ValidatingType = typeof(int);
+            this.chkMostrarTodosEdificios.AutoSize = true;
+            this.chkMostrarTodosEdificios.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkMostrarTodosEdificios.Location = new System.Drawing.Point(205, 133);
+            this.chkMostrarTodosEdificios.Name = "chkMostrarTodosEdificios";
+            this.chkMostrarTodosEdificios.Size = new System.Drawing.Size(230, 22);
+            this.chkMostrarTodosEdificios.TabIndex = 19;
+            this.chkMostrarTodosEdificios.Text = "Mostrar todos los edificios";
+            this.chkMostrarTodosEdificios.UseVisualStyleBackColor = true;
             // 
-            // cmbBarrio
+            // txtNombreEdificio
             // 
-            this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBarrio.FormattingEnabled = true;
-            this.cmbBarrio.Location = new System.Drawing.Point(204, 271);
-            this.cmbBarrio.Name = "cmbBarrio";
-            this.cmbBarrio.Size = new System.Drawing.Size(130, 21);
-            this.cmbBarrio.TabIndex = 37;
+            this.txtNombreEdificio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreEdificio.Location = new System.Drawing.Point(205, 103);
+            this.txtNombreEdificio.Name = "txtNombreEdificio";
+            this.txtNombreEdificio.Size = new System.Drawing.Size(233, 24);
+            this.txtNombreEdificio.TabIndex = 17;
+            // 
+            // lblNombreEdificio
+            // 
+            this.lblNombreEdificio.AutoSize = true;
+            this.lblNombreEdificio.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreEdificio.Location = new System.Drawing.Point(70, 103);
+            this.lblNombreEdificio.Name = "lblNombreEdificio";
+            this.lblNombreEdificio.Size = new System.Drawing.Size(129, 18);
+            this.lblNombreEdificio.TabIndex = 16;
+            this.lblNombreEdificio.Text = "Nombre Edificio";
+            // 
+            // btnAgregarEdificio
+            // 
+            this.btnAgregarEdificio.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregarEdificio.Image")));
+            this.btnAgregarEdificio.Location = new System.Drawing.Point(240, 468);
+            this.btnAgregarEdificio.Name = "btnAgregarEdificio";
+            this.btnAgregarEdificio.Size = new System.Drawing.Size(75, 60);
+            this.btnAgregarEdificio.TabIndex = 49;
+            this.btnAgregarEdificio.UseVisualStyleBackColor = true;
+            this.btnAgregarEdificio.Click += new System.EventHandler(this.btnAgregarEdificio_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Location = new System.Drawing.Point(321, 468);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(75, 60);
+            this.btnSalir.TabIndex = 50;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // ABM_Edificio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(889, 431);
-            this.Controls.Add(this.cmbBarrio);
-            this.Controls.Add(this.txtNumeroCalle);
-            this.Controls.Add(this.btnActualizarEdificio);
+            this.ClientSize = new System.Drawing.Size(592, 543);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnAgregarEdificio);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.chkMostrarTodosEdificios);
+            this.Controls.Add(this.txtNombreEdificio);
+            this.Controls.Add(this.lblNombreEdificio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.gdrEdificios);
-            this.Controls.Add(this.btnLimpiarCampos);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtCalle);
-            this.Controls.Add(this.chkAscensor);
-            this.Controls.Add(this.txtCantidadDptos);
-            this.Controls.Add(this.txtNombreEdificio);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "ABM_Edificio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Edificios";
@@ -305,29 +207,19 @@ namespace Inmobiliaria
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtNombreEdificio;
-        private System.Windows.Forms.MaskedTextBox txtCantidadDptos;
-        private System.Windows.Forms.CheckBox chkAscensor;
-        private System.Windows.Forms.TextBox txtCalle;
-        private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button btnLimpiarCampos;
         private System.Windows.Forms.DataGridView gdrEdificios;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnActualizarEdificio;
-        private System.Windows.Forms.MaskedTextBox txtNumeroCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn CantidadDptos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ascensor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Calle;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumeroCalle;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdBarrio;
-        private System.Windows.Forms.ComboBox cmbBarrio;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.CheckBox chkMostrarTodosEdificios;
+        private System.Windows.Forms.TextBox txtNombreEdificio;
+        private System.Windows.Forms.Label lblNombreEdificio;
+        private System.Windows.Forms.Button btnAgregarEdificio;
+        private System.Windows.Forms.Button btnSalir;
     }
 }

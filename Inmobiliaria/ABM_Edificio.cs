@@ -19,63 +19,8 @@ namespace Inmobiliaria
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            if (ValidarCamposVacios())
-            {
-                Edificio ed = ObtenerDatosEdificio();
-                bool res = AD_Edificios.AgregarEdificioBD(ed);
-
-                if (res)
-                {
-                    MessageBox.Show("Edificio Agregado Con Exito");
-                    LimpiarCampos();
-                    CargarComboBarrios();
-                    CargarGrilla();
-                }
-                else
-                {
-                    MessageBox.Show("Error al Cargar Edificio");
-                }
-            }
-            btnActualizarEdificio.Enabled = false;
 
 
-        }
-
-        private void CargarComboBarrios()
-        {
-
-            try
-            {
-                
-                cmbBarrio.DataSource = AD_Edificios.ObtenerTabla("barrios");
-                cmbBarrio.DisplayMember = "n_barrio";
-                cmbBarrio.ValueMember = "id_barrio";
-                cmbBarrio.SelectedIndex = -1;
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
-
-
-        }
-
-
-
-
-
-        private void LimpiarCampos()
-        {
-            txtNombreEdificio.Text = "";
-            txtCantidadDptos.Text = "";
-            chkAscensor.Checked = false;
-            txtCalle.Text = "";
-            txtNumeroCalle.Text = "";
-            txtNombreEdificio.Focus();
-        }
 
 
         private void CargarGrilla()
@@ -94,112 +39,62 @@ namespace Inmobiliaria
 
         private void AltaEdificio_Load(object sender, EventArgs e)
         {
-            CargarComboBarrios();
-            LimpiarCampos();
-            CargarGrilla();
-        }
-
-        private Edificio ObtenerDatosEdificio()
-        {
-            Edificio ed = new Edificio();
-            ed.NombreEdificio = txtNombreEdificio.Text.Trim();
-            ed.CantidadDptosEdificio = int.Parse(txtCantidadDptos.Text);
-            if (chkAscensor.Checked)
-            {
-                ed.TieneAscensorEdificio = true;
-            }
-            else
-            {
-                ed.TieneAscensorEdificio = false;
-            }
-            ed.CalleEdificio = txtCalle.Text.Trim();
-            ed.NumeroCalleEdificio = int.Parse(txtNumeroCalle.Text);
-            //p.TipoDocumentoPersona = (int)cmbTdocumento.SelectedValue; //solo ej
-            ed.IdBarrioEdificio = (int)cmbBarrio.SelectedValue;
-            //ed.IdBarrioEdificio = int.Parse(txtIdBarrio.Text); //no cmb
-
-
-
-            return ed;
-        }
-
-        private void btnLimpiarCampos_Click(object sender, EventArgs e)
-        {
-            LimpiarCampos();
-            btnActualizarEdificio.Enabled = false;
-
-        }
-
-        private bool ValidarCamposVacios()
-        {
-            if (txtCalle.Text.Equals("") || txtCantidadDptos.Text.Equals("") || cmbBarrio.Text.Equals("") || txtNombreEdificio.Text.Equals("") || txtNumeroCalle.Text.Equals(""))
-            {
-                MessageBox.Show("Complete todos los campos para continuar");
-                return false;
-            }
-            else
-                return true;
+            txtNombreEdificio.Focus();
         }
 
 
 
-        private void CargarCampos(Edificio ed)
-        {
-            txtNombreEdificio.Text = ed.NombreEdificio;
 
-            txtCantidadDptos.Text = ed.CantidadDptosEdificio.ToString();
-
-
-            if (ed.TieneAscensorEdificio)
-            {
-                chkAscensor.Checked = true;
-            }
-            else
-            {
-                chkAscensor.Checked = false;
-            }
-
-            txtCalle.Text = ed.CalleEdificio;
-            txtNumeroCalle.Text = ed.NumeroCalleEdificio.ToString();
-            //cmbTdocumento.SelectedValue = p.TipoDocumentoPersona;
-            cmbBarrio.SelectedValue = ed.IdBarrioEdificio;
-            //txtIdBarrio.Text = ed.IdBarrioEdificio.ToString();
-
-        }
-
-        private void btnActualizarEdificio_Click(object sender, EventArgs e)
-        {
-            if (ValidarCamposVacios())
-            {
-                Edificio ed = ObtenerDatosEdificio();
-                bool res = AD_Edificios.ActualizarEdificio(ed);
-                if (res)
-                {
-                    MessageBox.Show("Edificio Actualizado con exito");
-                    LimpiarCampos();
-                    CargarComboBarrios();
-                    CargarGrilla();
-                }
-                else
-                {
-                    MessageBox.Show("Error al Actualizar Edificio");
-                }
-            }
-            btnActualizarEdificio.Enabled = false;
-
-        }
 
         private void gdrEdificios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int indice = e.RowIndex;
-            btnActualizarEdificio.Enabled = true;
             DataGridViewRow filaSeleccionda = gdrEdificios.Rows[indice];
             string nombreEdificio = filaSeleccionda.Cells["Nombre"].Value.ToString();
             Edificio ed = AD_Edificios.ObtenerEdificio(nombreEdificio);
 
-            LimpiarCampos();
+            frm_Alta_Edificio ventana = new frm_Alta_Edificio(ed);
 
-            CargarCampos(ed);
+            ventana.ShowDialog();
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (chkMostrarTodosEdificios.Checked)
+            {
+                CargarGrilla();
+            }
+            else if (txtNombreEdificio.Text.Equals(""))
+            {
+                MessageBox.Show("Selecciona algun filtro!", "Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtNombreEdificio.Focus();
+            }
+            else
+            {
+
+                gdrEdificios.DataSource = AD_Edificios.GetEdificioPorNombre(txtNombreEdificio.Text);
+                if (gdrEdificios.Rows.Count == 0)
+                {
+                    MessageBox.Show("No se encontraron resultados!", "Aviso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            txtNombreEdificio.Text = "";
+            chkMostrarTodosEdificios.Checked = false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+            this.Close();
+            
+        }
+
+        private void btnAgregarEdificio_Click(object sender, EventArgs e)
+        {
+            Edificio ed = new Edificio();
+            frm_Alta_Edificio ventana = new frm_Alta_Edificio(ed);
+            ventana.ShowDialog();
         }
     }
 

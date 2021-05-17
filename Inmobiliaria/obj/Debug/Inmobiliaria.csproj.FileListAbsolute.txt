@@ -22,3 +22,5 @@ C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.pdb
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.ABM_Edificio.resources
 C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.ABM_Dueños.resources
+C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.frm_Alta_Dueño.resources
+C:\Users\SANTI\Desktop\TP PAV PA\TP_PAVI_G04\Inmobiliaria\obj\Debug\Inmobiliaria.frm_Alta_Edificio.resources
