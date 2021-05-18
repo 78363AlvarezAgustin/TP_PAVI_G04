@@ -61,6 +61,7 @@
     <Compile Include="AccesoADatos\AD_Propiedades.cs" />
     <Compile Include="AccesoADatos\AD_Proveedores.cs" />
     <Compile Include="AccesoADatos\AD_Provincias.cs" />
+    <Compile Include="AccesoADatos\AD_MediosPublicidad.cs" />
     <Compile Include="AccesoADatos\AD_TipoDoc.cs" />
     <Compile Include="AccesoADatos\AD_TiposOperaciones.cs" />
     <Compile Include="AccesoADatos\AD_TiposPropiedades.cs" />
@@ -77,18 +78,32 @@
     <Compile Include="Entidades\Propiedad.cs" />
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Provincia.cs" />
+    <Compile Include="Entidades\MedioPublicidad.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
+    <Compile Include="Entidades\TipoPropiedad.cs" />
     <Compile Include="Formularios\frmABMEdificios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmABMEdificios.Designer.cs">
       <DependentUpon>frmABMEdificios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmABMMediosPublic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMMediosPublic.Designer.cs">
+      <DependentUpon>frmABMMediosPublic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmABMTipoDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmABMTipoDocumento.Designer.cs">
       <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoProp.Designer.cs">
+      <DependentUpon>frmABMTipoProp.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAltaBarrio.cs">
       <SubType>Form</SubType>
@@ -326,6 +341,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\frmABMDueños.resx">
+      <DependentUpon>frmABMDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMEdificios.resx">
+      <DependentUpon>frmABMEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMTipoDocumento.resx">
+      <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
       <DependentUpon>frmAltaBarrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,8 +368,17 @@
     <EmbeddedResource Include="Formularios\frmAltaPropiedades.resx">
       <DependentUpon>frmAltaPropiedades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaProveedor.resx">
+      <DependentUpon>frmAltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
       <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDueños.resx">
+      <DependentUpon>frmFiltroDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEdificios.resx">
+      <DependentUpon>frmFiltroEdificios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
       <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
@@ -368,6 +401,9 @@
     <EmbeddedResource Include="Formularios\frmFiltroDepartamentos.resx">
       <DependentUpon>frmFiltroDepartamentos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroProveedores.resx">
+      <DependentUpon>frmFiltroProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +421,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarDepartamento.resx">
       <DependentUpon>frmModificarEliminarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarProveedor.resx">
+      <DependentUpon>frmModificarEliminarProveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEmpleado.resx">
       <DependentUpon>frmModificarEmpleado.cs</DependentUpon>

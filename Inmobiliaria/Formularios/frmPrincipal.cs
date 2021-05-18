@@ -86,7 +86,7 @@ namespace Inmobiliaria
 
         private void aBMTIpoDocToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFiltroDocumentos ventana = new frmFiltroDocumentos();
+            frmABMTipoDocumento ventana = new frmABMTipoDocumento();
             ventana.ShowDialog();
         }
 
@@ -105,6 +105,18 @@ namespace Inmobiliaria
         private void aBMDeptosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmFiltroDeptos ventana = new frmFiltroDeptos();
+            ventana.ShowDialog();
+        }
+
+        private void aBMMedioPublicidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMMediosPublic ventana = new frmABMMediosPublic();
+            ventana.ShowDialog();
+        }
+
+        private void aBMTipoPropiedadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmABMTipoProp ventana = new frmABMTipoProp();
             ventana.ShowDialog();
         }
     }

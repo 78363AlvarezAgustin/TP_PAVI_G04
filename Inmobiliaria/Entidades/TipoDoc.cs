@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.Entidades
 {
-    class TipoDoc
+    public class TipoDoc
     {
+        private int id;
+        private string nombreTipoDocumento;
+
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string NombreTipoDocumento
+        {
+            get => nombreTipoDocumento;
+            set => nombreTipoDocumento = value;
+        }
     }
 }
