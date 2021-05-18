@@ -62,15 +62,17 @@ namespace Inmobiliaria
             this.aBMProvinciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aBMDeptosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediosPublicidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMMedioPublicidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoPropiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMTipoPropiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mediosPublicidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMMedioPublicidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoPropiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aBMTipoPropiedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mediosPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBMMediosPagoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,6 +110,7 @@ namespace Inmobiliaria
             this.deptosToolStripMenuItem,
             this.mediosPublicidadToolStripMenuItem,
             this.tipoPropiedadesToolStripMenuItem,
+            this.mediosPagoToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
@@ -346,6 +349,36 @@ namespace Inmobiliaria
             this.aBMDeptosToolStripMenuItem.Text = "ABM Deptos";
             this.aBMDeptosToolStripMenuItem.Click += new System.EventHandler(this.aBMDeptosToolStripMenuItem_Click);
             // 
+            // mediosPublicidadToolStripMenuItem
+            // 
+            this.mediosPublicidadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aBMMedioPublicidadToolStripMenuItem});
+            this.mediosPublicidadToolStripMenuItem.Name = "mediosPublicidadToolStripMenuItem";
+            this.mediosPublicidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mediosPublicidadToolStripMenuItem.Text = "Medios Publicidad";
+            // 
+            // aBMMedioPublicidadToolStripMenuItem
+            // 
+            this.aBMMedioPublicidadToolStripMenuItem.Name = "aBMMedioPublicidadToolStripMenuItem";
+            this.aBMMedioPublicidadToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.aBMMedioPublicidadToolStripMenuItem.Text = "ABM Medio Publicidad";
+            this.aBMMedioPublicidadToolStripMenuItem.Click += new System.EventHandler(this.aBMMedioPublicidadToolStripMenuItem_Click);
+            // 
+            // tipoPropiedadesToolStripMenuItem
+            // 
+            this.tipoPropiedadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aBMTipoPropiedadesToolStripMenuItem});
+            this.tipoPropiedadesToolStripMenuItem.Name = "tipoPropiedadesToolStripMenuItem";
+            this.tipoPropiedadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoPropiedadesToolStripMenuItem.Text = "Tipo Propiedades";
+            // 
+            // aBMTipoPropiedadesToolStripMenuItem
+            // 
+            this.aBMTipoPropiedadesToolStripMenuItem.Name = "aBMTipoPropiedadesToolStripMenuItem";
+            this.aBMTipoPropiedadesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.aBMTipoPropiedadesToolStripMenuItem.Text = "ABM Tipo Propiedades";
+            this.aBMTipoPropiedadesToolStripMenuItem.Click += new System.EventHandler(this.aBMTipoPropiedadesToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -382,35 +415,20 @@ namespace Inmobiliaria
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // mediosPublicidadToolStripMenuItem
+            // mediosPagoToolStripMenuItem
             // 
-            this.mediosPublicidadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMMedioPublicidadToolStripMenuItem});
-            this.mediosPublicidadToolStripMenuItem.Name = "mediosPublicidadToolStripMenuItem";
-            this.mediosPublicidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.mediosPublicidadToolStripMenuItem.Text = "Medios Publicidad";
+            this.mediosPagoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aBMMediosPagoToolStripMenuItem});
+            this.mediosPagoToolStripMenuItem.Name = "mediosPagoToolStripMenuItem";
+            this.mediosPagoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mediosPagoToolStripMenuItem.Text = "Medios Pago";
             // 
-            // aBMMedioPublicidadToolStripMenuItem
+            // aBMMediosPagoToolStripMenuItem
             // 
-            this.aBMMedioPublicidadToolStripMenuItem.Name = "aBMMedioPublicidadToolStripMenuItem";
-            this.aBMMedioPublicidadToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
-            this.aBMMedioPublicidadToolStripMenuItem.Text = "ABM Medio Publicidad";
-            this.aBMMedioPublicidadToolStripMenuItem.Click += new System.EventHandler(this.aBMMedioPublicidadToolStripMenuItem_Click);
-            // 
-            // tipoPropiedadesToolStripMenuItem
-            // 
-            this.tipoPropiedadesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aBMTipoPropiedadesToolStripMenuItem});
-            this.tipoPropiedadesToolStripMenuItem.Name = "tipoPropiedadesToolStripMenuItem";
-            this.tipoPropiedadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.tipoPropiedadesToolStripMenuItem.Text = "Tipo Propiedades";
-            // 
-            // aBMTipoPropiedadesToolStripMenuItem
-            // 
-            this.aBMTipoPropiedadesToolStripMenuItem.Name = "aBMTipoPropiedadesToolStripMenuItem";
-            this.aBMTipoPropiedadesToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
-            this.aBMTipoPropiedadesToolStripMenuItem.Text = "ABM Tipo Propiedades";
-            this.aBMTipoPropiedadesToolStripMenuItem.Click += new System.EventHandler(this.aBMTipoPropiedadesToolStripMenuItem_Click);
+            this.aBMMediosPagoToolStripMenuItem.Name = "aBMMediosPagoToolStripMenuItem";
+            this.aBMMediosPagoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMMediosPagoToolStripMenuItem.Text = "ABM Medios Pago";
+            this.aBMMediosPagoToolStripMenuItem.Click += new System.EventHandler(this.aBMMediosPagoToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -477,5 +495,7 @@ namespace Inmobiliaria
         private System.Windows.Forms.ToolStripMenuItem aBMMedioPublicidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoPropiedadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBMTipoPropiedadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mediosPagoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aBMMediosPagoToolStripMenuItem;
     }
 }
