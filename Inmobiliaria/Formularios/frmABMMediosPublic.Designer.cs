@@ -178,6 +178,7 @@ namespace Inmobiliaria.Formularios
             this.Controls.Add(this.btnAgregarModificar);
             this.Controls.Add(this.gdrMediosPublicitarios);
             this.Name = "frmABMMediosPublic";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmABMMediosPublic";
             ((System.ComponentModel.ISupportInitialize)(this.gdrMediosPublicitarios)).EndInit();
             this.ResumeLayout(false);

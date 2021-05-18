@@ -114,6 +114,7 @@ namespace Inmobiliaria.Formularios
             this.gdrTiposDocumentos.ReadOnly = true;
             this.gdrTiposDocumentos.Size = new System.Drawing.Size(377, 219);
             this.gdrTiposDocumentos.TabIndex = 60;
+            this.gdrTiposDocumentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdrTiposDocumentos_CellClick);
             // 
             // ID
             // 

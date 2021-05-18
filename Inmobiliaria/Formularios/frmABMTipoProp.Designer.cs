@@ -37,14 +37,14 @@ namespace Inmobiliaria.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.gdrTiposPropiedad = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoPropiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnAgregarModificar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoPropiedad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gdrTiposPropiedad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,6 +120,30 @@ namespace Inmobiliaria.Formularios
             this.gdrTiposPropiedad.TabIndex = 75;
             this.gdrTiposPropiedad.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdrTiposPropiedades_CellClick);
             // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "id_tipo_propiedad";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 50;
+            // 
+            // TipoPropiedad
+            // 
+            this.TipoPropiedad.DataPropertyName = "n_tipo_propiedad";
+            this.TipoPropiedad.HeaderText = "Tipo De Propiedad";
+            this.TipoPropiedad.Name = "TipoPropiedad";
+            this.TipoPropiedad.ReadOnly = true;
+            this.TipoPropiedad.Width = 150;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "descripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 555;
+            // 
             // btnEliminar
             // 
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
@@ -168,30 +192,6 @@ namespace Inmobiliaria.Formularios
             this.label3.TabIndex = 81;
             this.label3.Text = "Descripcion";
             // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "id_tipo_propiedad";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Width = 50;
-            // 
-            // TipoPropiedad
-            // 
-            this.TipoPropiedad.DataPropertyName = "n_tipo_propiedad";
-            this.TipoPropiedad.HeaderText = "Tipo De Propiedad";
-            this.TipoPropiedad.Name = "TipoPropiedad";
-            this.TipoPropiedad.ReadOnly = true;
-            this.TipoPropiedad.Width = 150;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "descripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 555;
-            // 
             // frmABMTipoProp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +210,7 @@ namespace Inmobiliaria.Formularios
             this.Controls.Add(this.btnAgregarModificar);
             this.Controls.Add(this.gdrTiposPropiedad);
             this.Name = "frmABMTipoProp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmABMTipoProp";
             ((System.ComponentModel.ISupportInitialize)(this.gdrTiposPropiedad)).EndInit();
             this.ResumeLayout(false);
