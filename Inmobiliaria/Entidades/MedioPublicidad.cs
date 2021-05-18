@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.Entidades
 {
-    class MedioPublicidad
+    public class MedioPublicidad
     {
+        private int id;
+        private string nombreMedioPublicitario;
+
+        public int Id
+        {
+            get => id;
+            set => id = value;
+        }
+
+        public string NombreMedioPublicitario
+        {
+            get => nombreMedioPublicitario;
+            set => nombreMedioPublicitario = value;
+        }
     }
 }
