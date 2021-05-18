@@ -365,6 +365,9 @@
     <EmbeddedResource Include="Formularios\frmAltaEmpleado.resx">
       <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaEncExpensas.resx">
+      <DependentUpon>frmAltaEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaEscribanos.resx">
       <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
     </EmbeddedResource>
@@ -398,6 +401,9 @@
     <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
       <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEncExpensas.resx">
+      <DependentUpon>frmFiltroEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEscribanos.resx">
       <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
     </EmbeddedResource>
@@ -430,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarDepto.resx">
       <DependentUpon>frmModificarEliminarDepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarEncExpensas.resx">
+      <DependentUpon>frmModificarEliminarEncExpensas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarEscribano.resx">
       <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
