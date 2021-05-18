@@ -347,8 +347,14 @@
     <EmbeddedResource Include="Formularios\frmABMEdificios.resx">
       <DependentUpon>frmABMEdificios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMMediosPublic.resx">
+      <DependentUpon>frmABMMediosPublic.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmABMTipoDocumento.resx">
       <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMTipoProp.resx">
+      <DependentUpon>frmABMTipoProp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
       <DependentUpon>frmAltaBarrio.cs</DependentUpon>
