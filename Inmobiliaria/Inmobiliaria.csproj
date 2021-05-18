@@ -391,6 +391,9 @@
     <EmbeddedResource Include="Formularios\frmAltaEscribanos.resx">
       <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaMediosPago.resx">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaMoneda.resx">
       <DependentUpon>frmAltaMoneda.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,6 +429,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEscribanos.resx">
       <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroMedioPago.resx">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroMoneda.resx">
       <DependentUpon>frmFiltroMoneda.cs</DependentUpon>
@@ -483,6 +489,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarLocalidad.resx">
       <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarMediosPago.resx">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
