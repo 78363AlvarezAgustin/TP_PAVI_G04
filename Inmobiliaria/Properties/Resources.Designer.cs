@@ -163,6 +163,26 @@ namespace Inmobiliaria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_2_27391184 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_2_27391184", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_2_27391185 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_2_27391185", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_add1__32378 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_add1-_32378", resourceCulture);
@@ -223,6 +243,26 @@ namespace Inmobiliaria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_add1__323786 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_add1-_323786", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_add1__323787 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_add1-_323787", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Building_3870065 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_Building_3870065", resourceCulture);
@@ -263,6 +303,46 @@ namespace Inmobiliaria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_7289183 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_7289183", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_7289184 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_7289184", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_7289185 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_7289185", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_7289186 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_7289186", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_compose_1055085 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_compose_1055085", resourceCulture);
@@ -276,6 +356,26 @@ namespace Inmobiliaria.Properties {
         internal static System.Drawing.Bitmap iconfinder_floppy_285657 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_floppy_285657", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_floppy_2856571 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_floppy_2856571", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_floppy_2856572 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_floppy_2856572", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +426,26 @@ namespace Inmobiliaria.Properties {
         internal static System.Drawing.Bitmap iconfinder_trash_bin_garbage_delete_rubbish_waste_36437293 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_trash-bin-garbage-delete-rubbish-waste_36437293", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_trash_bin_garbage_delete_rubbish_waste_36437294 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_trash-bin-garbage-delete-rubbish-waste_36437294", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_trash_bin_garbage_delete_rubbish_waste_36437295 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_trash-bin-garbage-delete-rubbish-waste_36437295", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

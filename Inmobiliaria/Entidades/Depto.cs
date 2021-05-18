@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.Entidades
 {
-    class Depto
+    public class Depto
     {
+
+        private int Id;
+        private string Nombre;
+        private int IdProvincia;
+
+        public int IdDepto { get => Id; set => Id = value; }
+        public string NombreDepto { get => Nombre; set => Nombre = value; }
+        public int IdProvinciaDepto { get => IdProvincia; set => IdProvincia = value; }
+
     }
 }

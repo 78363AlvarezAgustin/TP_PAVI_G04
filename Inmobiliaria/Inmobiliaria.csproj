@@ -353,6 +353,9 @@
     <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
       <DependentUpon>frmAltaBarrio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaDepto.resx">
+      <DependentUpon>frmAltaDepto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaEmpleado.resx">
       <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +374,9 @@
     <EmbeddedResource Include="Formularios\frmAltaProveedor.resx">
       <DependentUpon>frmAltaProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaProvincia.resx">
+      <DependentUpon>frmAltaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
       <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
     </EmbeddedResource>
@@ -379,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEdificios.resx">
       <DependentUpon>frmFiltroEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDeptos.resx">
+      <DependentUpon>frmFiltroDeptos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
       <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
@@ -404,11 +413,17 @@
     <EmbeddedResource Include="Formularios\frmFiltroProveedores.resx">
       <DependentUpon>frmFiltroProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroProvincias.resx">
+      <DependentUpon>frmFiltroProvincias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarBarrios.resx">
       <DependentUpon>frmModificarEliminarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarDepto.resx">
+      <DependentUpon>frmModificarEliminarDepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarEscribano.resx">
       <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
@@ -424,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarProveedor.resx">
       <DependentUpon>frmModificarEliminarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarProvincia.resx">
+      <DependentUpon>frmModificarEliminarProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEmpleado.resx">
       <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
