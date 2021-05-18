@@ -119,5 +119,11 @@ namespace Inmobiliaria
             frmABMTipoProp ventana = new frmABMTipoProp();
             ventana.ShowDialog();
         }
+
+        private void aBMMediosPagoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFiltroMedioPago ventana = new frmFiltroMedioPago();
+            ventana.ShowDialog();
+        }
     }
 }

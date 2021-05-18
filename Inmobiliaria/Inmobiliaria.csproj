@@ -57,6 +57,7 @@
     <Compile Include="AccesoADatos\AD_EncExpensas.cs" />
     <Compile Include="AccesoADatos\AD_Escribanos.cs" />
     <Compile Include="AccesoADatos\AD_Localidades.cs" />
+    <Compile Include="AccesoADatos\AD_MediosPago.cs" />
     <Compile Include="AccesoADatos\AD_Monedas.cs" />
     <Compile Include="AccesoADatos\AD_Propiedades.cs" />
     <Compile Include="AccesoADatos\AD_Proveedores.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\EncExpensas.cs" />
     <Compile Include="Entidades\Escribano.cs" />
+    <Compile Include="Entidades\MediosPago.cs" />
     <Compile Include="Entidades\Moneda.cs" />
     <Compile Include="Entidades\Localidades.cs" />
     <Compile Include="Entidades\Propiedad.cs" />
@@ -134,6 +136,12 @@
     </Compile>
     <Compile Include="Formularios\frmAltaEscribanos.Designer.cs">
       <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.Designer.cs">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAltaMoneda.cs">
       <SubType>Form</SubType>
@@ -212,6 +220,12 @@
     </Compile>
     <Compile Include="Formularios\frmFiltroEscribanos.Designer.cs">
       <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.Designer.cs">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmFiltroMoneda.cs">
       <SubType>Form</SubType>
@@ -332,6 +346,12 @@
     </Compile>
     <Compile Include="Formularios\frmModificarLocalidad.Designer.cs">
       <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.Designer.cs">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmPrincipal.cs">
       <SubType>Form</SubType>
