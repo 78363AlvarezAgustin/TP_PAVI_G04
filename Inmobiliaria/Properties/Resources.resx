@@ -121,8 +121,14 @@
   <data name="iconfinder_trash-bin-garbage-delete-rubbish-waste_36437291" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_trash-bin-garbage-delete-rubbish-waste_3643729.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_Cancel_7289185" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_2_27391181" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_2_2739118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_floppy_2856572" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_floppy_285657.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_add1-_323785" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,17 +139,32 @@
   <data name="iconfinder_trash-bin-garbage-delete-rubbish-waste_36437293" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_trash-bin-garbage-delete-rubbish-waste_3643729.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_add1-_323787" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_add1-_323781" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="casa_inmobiliaria" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\casa_inmobiliaria.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_trash-bin-garbage-delete-rubbish-waste_36437295" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_trash-bin-garbage-delete-rubbish-waste_3643729.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconfinder_Building_3870065" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_Building_3870065.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_add1-_323783" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_trash-bin-garbage-delete-rubbish-waste_36437294" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_trash-bin-garbage-delete-rubbish-waste_3643729.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_user-group_285648" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconfinder_user-group_285648.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Cancel_7289183" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_Cancel_728918" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,14 +199,26 @@
   <data name="iconfinder_2_27391183" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_2_2739118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="iconfinder_floppy_285657" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_floppy_285657.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ABM_Departamentos3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\ABM_Departamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_add1-_32378" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_floppy_285657" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="iconfinder_add1-_323786" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_add1-_32378.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Cancel_7289181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_floppy_2856571" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_floppy_285657.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_2_27391185" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_2_2739118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ABM_Departamentos2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\ABM_Departamentos.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,13 +226,16 @@
   <data name="ABM_Departamentos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\ABM_Departamentos.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_Cancel_7289181" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="iconfinder_2_27391184" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_2_2739118.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconfinder_Cancel_7289184" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconfinder_reload_46828" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iconos1\iconfinder_reload_46828.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconfinder_user-group_285648" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconfinder_user-group_285648.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconfinder_Cancel_7289186" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Iconos1\iconfinder_Cancel_728918.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.Entidades
 {
-    class Provincia
+    public class Provincia
     {
+
+        private int Id;
+        private string Nombre;
+
+        public int IdProvincia { get => Id; set => Id = value; }
+        public string NombreProvincia { get => Nombre; set => Nombre = value; }
+
     }
 }
