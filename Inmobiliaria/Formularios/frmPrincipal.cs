@@ -1,4 +1,5 @@
 ﻿using Inmobiliaria.Formularios;
+using Inmobiliaria.Formularios.FrmTransacciones;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -123,6 +124,48 @@ namespace Inmobiliaria
         private void aBMMediosPagoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmFiltroMedioPago ventana = new frmFiltroMedioPago();
+            ventana.ShowDialog();
+        }
+
+        private void registrarFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroFactura ventana = new frmRegistroFactura();
+            ventana.ShowDialog();
+        }
+
+        private void registrarReciboToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroRecibo ventana = new frmRegistroRecibo();
+            ventana.ShowDialog();
+        }
+
+        private void registrarPublicidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaPublicidad ventana = new frmAltaPublicidad();
+            ventana.ShowDialog();
+        }
+
+        private void registrarClienteInteresadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarPropiedadInteresParaClientes ventana = new frmRegistrarPropiedadInteresParaClientes();
+            ventana.ShowDialog();
+        }
+
+        private void registrarDueñoPropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaDueñosXPropiedad ventana = new frmAltaDueñosXPropiedad();
+            ventana.ShowDialog();
+        }
+
+        private void registrarExpensasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroExpensas ventana = new frmRegistroExpensas();
+            ventana.ShowDialog();
+        }
+
+        private void registrarGastosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistroGastos ventana = new frmRegistroGastos();
             ventana.ShowDialog();
         }
     }
