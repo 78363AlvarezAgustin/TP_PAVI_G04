@@ -57,6 +57,7 @@
     <Compile Include="AccesoADatos\AD_EncExpensas.cs" />
     <Compile Include="AccesoADatos\AD_Escribanos.cs" />
     <Compile Include="AccesoADatos\AD_Localidades.cs" />
+    <Compile Include="AccesoADatos\AD_MediosPago.cs" />
     <Compile Include="AccesoADatos\AD_Monedas.cs" />
     <Compile Include="AccesoADatos\AD_Propiedades.cs" />
     <Compile Include="AccesoADatos\AD_Proveedores.cs" />
@@ -65,6 +66,13 @@
     <Compile Include="AccesoADatos\AD_TipoDoc.cs" />
     <Compile Include="AccesoADatos\AD_TiposOperaciones.cs" />
     <Compile Include="AccesoADatos\AD_TiposPropiedades.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_DueñoXPropiedad.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Expensas.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Facturas.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Gastos.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_PropiedadInteresClientes.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
     <Compile Include="Entidades\Barrio.cs" />
     <Compile Include="Entidades\Departamento.cs" />
     <Compile Include="Entidades\Depto.cs" />
@@ -73,6 +81,7 @@
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\EncExpensas.cs" />
     <Compile Include="Entidades\Escribano.cs" />
+    <Compile Include="Entidades\MediosPago.cs" />
     <Compile Include="Entidades\Moneda.cs" />
     <Compile Include="Entidades\Localidades.cs" />
     <Compile Include="Entidades\Propiedad.cs" />
@@ -134,6 +143,12 @@
     </Compile>
     <Compile Include="Formularios\frmAltaEscribanos.Designer.cs">
       <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.Designer.cs">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmAltaMoneda.cs">
       <SubType>Form</SubType>
@@ -212,6 +227,12 @@
     </Compile>
     <Compile Include="Formularios\frmFiltroEscribanos.Designer.cs">
       <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.Designer.cs">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\frmFiltroMoneda.cs">
       <SubType>Form</SubType>
@@ -333,11 +354,59 @@
     <Compile Include="Formularios\frmModificarLocalidad.Designer.cs">
       <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.Designer.cs">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.Designer.cs">
+      <DependentUpon>frmAltaDueñosXPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaPublicidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaPublicidad.Designer.cs">
+      <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.Designer.cs">
+      <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroExpensas.Designer.cs">
+      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroFactura.Designer.cs">
+      <DependentUpon>frmRegistroFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroGastos.Designer.cs">
+      <DependentUpon>frmRegistroGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroRecibo.Designer.cs">
+      <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -365,8 +434,14 @@
     <EmbeddedResource Include="Formularios\frmAltaEmpleado.resx">
       <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaEncExpensas.resx">
+      <DependentUpon>frmAltaEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaEscribanos.resx">
       <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaMediosPago.resx">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmAltaMoneda.resx">
       <DependentUpon>frmAltaMoneda.cs</DependentUpon>
@@ -398,8 +473,14 @@
     <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
       <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEncExpensas.resx">
+      <DependentUpon>frmFiltroEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroEscribanos.resx">
       <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroMedioPago.resx">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroMoneda.resx">
       <DependentUpon>frmFiltroMoneda.cs</DependentUpon>
@@ -431,6 +512,9 @@
     <EmbeddedResource Include="Formularios\frmModificarEliminarDepto.resx">
       <DependentUpon>frmModificarEliminarDepto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarEncExpensas.resx">
+      <DependentUpon>frmModificarEliminarEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarEliminarEscribano.resx">
       <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
     </EmbeddedResource>
@@ -454,6 +538,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmModificarLocalidad.resx">
       <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarMediosPago.resx">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
@@ -520,5 +607,6 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_user-group_285648.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

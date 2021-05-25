@@ -9,10 +9,9 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.AccesoADatos
 {
-    public class AD_EncExpensas
+    class AD_MediosPago
     {
-
-        public static DataTable ObtenerEncExpensas()
+        public static DataTable ObtenerMediosPago()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -21,7 +20,7 @@ namespace Inmobiliaria.AccesoADatos
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "GetEncExpensas";
+                string consulta = "GetMediosPago";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -50,8 +49,46 @@ namespace Inmobiliaria.AccesoADatos
             }
         }
 
+        public static DataTable ObtenerMediosPagoPorId(int id)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
 
-        public static bool AgregarEncExpensas(EncExpensas encargado)
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "GetMediosPagoPorId";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+        public static bool AgregarMediosPago(MediosPago pago)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -59,12 +96,11 @@ namespace Inmobiliaria.AccesoADatos
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "InsertEncExpensas";
+                string consulta = "InsertMediosPago";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@legajo", encargado.LegajoEncExpensas);
-                cmd.Parameters.AddWithValue("@nombre", encargado.NombreEncExpensas);
-                cmd.Parameters.AddWithValue("@apellido", encargado.ApellidoEncExpensas);
-                cmd.Parameters.AddWithValue("@telefono", encargado.TelefonoEncExpensas);
+                cmd.Parameters.AddWithValue("@id", pago.IdPago);
+                cmd.Parameters.AddWithValue("@nombre", pago.NombrePago);
+                cmd.Parameters.AddWithValue("@descripcion", pago.DescripcionPago);
 
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
@@ -126,17 +162,17 @@ namespace Inmobiliaria.AccesoADatos
         }
 
 
-        public static EncExpensas ObtenerObjEncExpensasPorLegajo(string legajo)
+        public static MediosPago ObtenerObjMediosPagoPorId(string id)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
-            EncExpensas enc = new EncExpensas();
+            MediosPago pago = new MediosPago();
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "GetEncPorLegajo";
+                string consulta = "GetMediosPagoPorId";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@legajo", legajo);
+                cmd.Parameters.AddWithValue("@id", id);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
@@ -148,10 +184,9 @@ namespace Inmobiliaria.AccesoADatos
 
                 if (dr != null && dr.Read())
                 {
-                    enc.LegajoEncExpensas = int.Parse(dr["legajo_encargado"].ToString());
-                    enc.NombreEncExpensas = dr["n_encargado"].ToString();
-                    enc.ApellidoEncExpensas = dr["apellido_encargado"].ToString();
-                    enc.TelefonoEncExpensas = int.Parse(dr["tel_encargado"].ToString());
+                    pago.IdPago = int.Parse(dr["id_medio_pago"].ToString());
+                    pago.NombrePago = dr["n_medio_pago"].ToString();
+                    pago.DescripcionPago = dr["descripcion"].ToString();
                 }
             }
             catch (Exception)
@@ -164,11 +199,10 @@ namespace Inmobiliaria.AccesoADatos
                 cn.Close();
             }
 
-            return enc;
+            return pago;
         }
 
-
-        public static bool ActualizarEncExpensas(EncExpensas enc)
+        public static bool ActualizarMediosPago(MediosPago pago)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -177,12 +211,43 @@ namespace Inmobiliaria.AccesoADatos
             {
 
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "UpdateEncExpensas";
+                string consulta = "UpdateMediosPago";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@legajo", enc.LegajoEncExpensas);
-                cmd.Parameters.AddWithValue("@nombre", enc.NombreEncExpensas);
-                cmd.Parameters.AddWithValue("@apellido", enc.ApellidoEncExpensas);
-                cmd.Parameters.AddWithValue("@telefono", enc.TelefonoEncExpensas);
+                cmd.Parameters.AddWithValue("@id", pago.IdPago);
+                cmd.Parameters.AddWithValue("@nombre", pago.NombrePago);
+                cmd.Parameters.AddWithValue("@descripcion", pago.DescripcionPago);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                resultado = true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+            return resultado;
+        }
+
+
+        public static bool EliminarMediosPago(MediosPago pago)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            bool resultado = false;
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "DeleteMediosPago";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id", pago.IdPago);
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
@@ -203,42 +268,7 @@ namespace Inmobiliaria.AccesoADatos
             return resultado;
         }
 
-
-        public static bool EliminarEncExpensas(EncExpensas enc)
-        {
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            bool resultado = false;
-            try
-            {
-
-                SqlCommand cmd = new SqlCommand();
-                string consulta = "DeleteEncExpensas";
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@legajo", enc.LegajoEncExpensas);
-
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = consulta;
-
-                cn.Open();
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-                resultado = true;
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            finally
-            {
-                cn.Close();
-            }
-            return resultado;
-        }
-
-
-        public static bool ExisteEncExpensas(int legajo)
+        public static bool ExisteMediosPago(string nom)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
@@ -247,9 +277,9 @@ namespace Inmobiliaria.AccesoADatos
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "GetEncPorLegajo";
+                string consulta = "GetMediosPagoPorNombre";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@legajo", legajo);
+                cmd.Parameters.AddWithValue("@Nombre", nom);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = consulta;
 
@@ -272,5 +302,6 @@ namespace Inmobiliaria.AccesoADatos
             }
             return resultado;
         }
+
     }
 }
