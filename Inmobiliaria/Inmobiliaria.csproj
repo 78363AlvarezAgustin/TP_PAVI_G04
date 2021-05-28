@@ -547,6 +547,9 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.resx">
+      <DependentUpon>frmAltaDueñosXPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaPublicidad.resx">
       <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
     </EmbeddedResource>
