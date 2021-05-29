@@ -22,9 +22,23 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
 
         private void frmRegistroFactura_Load(object sender, EventArgs e)
         {
+            CargarGrilla();
             CargarFecha();
             ObtenerUltimoNumFactura();
             CargarComboMediosPago();
+        }
+
+        public void CargarGrilla()
+        {
+            try
+            {
+                gdrListaFacturas.DataSource = AD_Facturas.ObtenerListadoFacturas();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener facturas");
+            }
+
         }
 
 
@@ -32,7 +46,6 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
             SqlConnection cn = new SqlConnection(cadenaConexion);
-
             try
             {
                 SqlCommand cmd = new SqlCommand();
@@ -239,6 +252,7 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
                     LimpiarCampos();
                     ObtenerUltimoNumFactura();
                     CargarComboMediosPago();
+                    CargarGrilla();
                 }
                 else
                 {
