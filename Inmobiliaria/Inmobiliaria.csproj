@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AccesoADatos\AD_Barrio.cs" />
     <Compile Include="AccesoADatos\AD_Barrios.cs" />
+    <Compile Include="AccesoADatos\AD_Clientes.cs" />
     <Compile Include="AccesoADatos\AD_Departamentos.cs" />
     <Compile Include="AccesoADatos\AD_Deptos.cs" />
     <Compile Include="AccesoADatos\AD_Dueños.cs" />
@@ -544,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
+      <DependentUpon>frmRegistroFactura.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
