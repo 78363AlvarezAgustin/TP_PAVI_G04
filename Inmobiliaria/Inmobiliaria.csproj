@@ -64,6 +64,7 @@
     <Compile Include="AccesoADatos\AD_Proveedores.cs" />
     <Compile Include="AccesoADatos\AD_Provincias.cs" />
     <Compile Include="AccesoADatos\AD_MediosPublicidad.cs" />
+    <Compile Include="AccesoADatos\AD_Secciones.cs" />
     <Compile Include="AccesoADatos\AD_TipoDoc.cs" />
     <Compile Include="AccesoADatos\AD_TiposOperaciones.cs" />
     <Compile Include="AccesoADatos\AD_TiposPropiedades.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Entidades\Proveedor.cs" />
     <Compile Include="Entidades\Provincia.cs" />
     <Compile Include="Entidades\MedioPublicidad.cs" />
+    <Compile Include="Entidades\Publicidad.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
     <Compile Include="Entidades\TipoPropiedad.cs" />
     <Compile Include="Formularios\frmABMEdificios.cs">
@@ -548,6 +550,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.resx">
+      <DependentUpon>frmAltaDueñosXPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaPublicidad.resx">
+      <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
