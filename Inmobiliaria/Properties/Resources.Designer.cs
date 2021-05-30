@@ -343,6 +343,16 @@ namespace Inmobiliaria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Cancel_7289187 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Cancel_7289187", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconfinder_compose_1055085 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_compose_1055085", resourceCulture);
@@ -376,6 +386,16 @@ namespace Inmobiliaria.Properties {
         internal static System.Drawing.Bitmap iconfinder_floppy_2856572 {
             get {
                 object obj = ResourceManager.GetObject("iconfinder_floppy_2856572", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_floppy_2856573 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_floppy_2856573", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
