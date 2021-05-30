@@ -1,4 +1,3 @@
-﻿using System;
 ﻿using Inmobiliaria.Entidades;
 using System;
 using System.Collections.Generic;
@@ -10,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace Inmobiliaria.AccesoADatos.Transacciones
 {
-    class AD_Recibos
     public class AD_Recibos
     {
 
