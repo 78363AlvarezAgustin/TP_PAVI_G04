@@ -84,6 +84,7 @@
     <Compile Include="Entidades\Empleados.cs" />
     <Compile Include="Entidades\EncExpensas.cs" />
     <Compile Include="Entidades\Escribano.cs" />
+    <Compile Include="Entidades\Expensas.cs" />
     <Compile Include="Entidades\MediosPago.cs" />
     <Compile Include="Entidades\Moneda.cs" />
     <Compile Include="Entidades\Localidades.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Entidades\Provincia.cs" />
     <Compile Include="Entidades\MedioPublicidad.cs" />
     <Compile Include="Entidades\Publicidad.cs" />
+    <Compile Include="Entidades\Recibo.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
     <Compile Include="Entidades\TipoPropiedad.cs" />
     <Compile Include="Formularios\frmABMEdificios.cs">
@@ -551,6 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
       <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroExpensas.resx">
+    </EmbeddedResource>
+      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
@@ -560,6 +565,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaPublicidad.resx">
       <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroRecibo.resx">
+      <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
