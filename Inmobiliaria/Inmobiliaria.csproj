@@ -76,6 +76,7 @@
     <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
     <Compile Include="Entidades\Barrio.cs" />
+    <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Departamento.cs" />
     <Compile Include="Entidades\Depto.cs" />
     <Compile Include="Entidades\Dueños.cs" />
@@ -547,6 +548,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
+      <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
