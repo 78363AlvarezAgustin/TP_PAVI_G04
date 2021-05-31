@@ -76,6 +76,7 @@
     <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
     <Compile Include="Entidades\Barrio.cs" />
+    <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Departamento.cs" />
     <Compile Include="Entidades\Depto.cs" />
     <Compile Include="Entidades\Dueños.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Entidades\EncExpensas.cs" />
     <Compile Include="Entidades\Escribano.cs" />
     <Compile Include="Entidades\Gastos.cs" />
+    <Compile Include="Entidades\Expensas.cs" />
     <Compile Include="Entidades\MediosPago.cs" />
     <Compile Include="Entidades\Moneda.cs" />
     <Compile Include="Entidades\Localidades.cs" />
@@ -92,6 +94,7 @@
     <Compile Include="Entidades\Provincia.cs" />
     <Compile Include="Entidades\MedioPublicidad.cs" />
     <Compile Include="Entidades\Publicidad.cs" />
+    <Compile Include="Entidades\Recibo.cs" />
     <Compile Include="Entidades\TipoDoc.cs" />
     <Compile Include="Entidades\TipoPropiedad.cs" />
     <Compile Include="Formularios\frmABMEdificios.cs">
@@ -549,6 +552,12 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
+      <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+	</EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroExpensas.resx">
+	<DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,6 +569,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroGastos.resx">
       <DependentUpon>frmRegistroGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroRecibo.resx">
+      <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
