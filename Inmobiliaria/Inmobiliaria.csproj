@@ -553,9 +553,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
       <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroExpensas.resx">
-    </EmbeddedResource>
-      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+	<DependentUpon>frmRegistroExpensas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
