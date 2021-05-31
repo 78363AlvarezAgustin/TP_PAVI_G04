@@ -15,7 +15,7 @@ namespace Inmobiliaria.Entidades
         private string Concepto;
         private int IdEdif;
 
-        public int IdProveedor { get => IdProveedor; set => IdProveedor = value; }
+        public int IdProveedor { get => IdProv; set => IdProv = value; }
         public int NroComprobanteGasto { get => NroComprobante; set => NroComprobante = value; }
         public DateTime FechaGasto { get => Fecha; set => Fecha = value; }
         public int ImporteGasto { get => Importe; set => Importe = value; }

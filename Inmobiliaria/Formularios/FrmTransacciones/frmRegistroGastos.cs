@@ -57,6 +57,7 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            txtNroComprobante.Focus();
         }
         private void LimpiarCampos()
         {
@@ -86,6 +87,7 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
                     CargarGrillaProveedores();
                     CargarGrillaEdificios();
                     CargarGrillaGastos();
+                    txtNroComprobante.Focus();
                 }
                 else
                 {
@@ -133,6 +135,9 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
 
             int IdProv = int.Parse(filaSeleccionada.Cells["Id"].Value.ToString());
             txtIdProveedor.Text = IdProv.ToString();
+
+            string concepto = filaSeleccionada.Cells["Descripcion"].Value.ToString();
+            txtConcepto.Text = concepto.ToString();
         }
 
         private void grillaEdificios_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -140,11 +145,16 @@ namespace Inmobiliaria.Formularios.FrmTransacciones
             int indice = e.RowIndex;
             DataGridViewRow filaSeleccionada = grillaEdificios.Rows[indice];
 
-            int IdEdif = int.Parse(filaSeleccionada.Cells["Id"].Value.ToString());
+            int IdEdif = int.Parse(filaSeleccionada.Cells["id_edificio"].Value.ToString());
             txtIdEdificio.Text = IdEdif.ToString();
         }
 
         private void lblGastos2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtIdProveedor_TextChanged(object sender, EventArgs e)
         {
 
         }
