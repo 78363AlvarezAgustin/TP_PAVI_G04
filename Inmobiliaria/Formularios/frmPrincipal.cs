@@ -1,4 +1,5 @@
 ﻿using Inmobiliaria.Formularios;
+using Inmobiliaria.Formularios.FrmReportesListados;
 using Inmobiliaria.Formularios.FrmTransacciones;
 using System;
 using System.Collections.Generic;
@@ -166,6 +167,90 @@ namespace Inmobiliaria
         private void registrarGastosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmRegistroGastos ventana = new frmRegistroGastos();
+            ventana.ShowDialog();
+        }
+
+        private void listEmpleadosPorPatronApeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListEmpleadosPorPatronApe ventana = new ListEmpleadosPorPatronApe();
+            ventana.ShowDialog();
+        }
+
+        private void reporteDeEmpleadosPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepEmpleadosPorBarrio ventana = new RepEmpleadosPorBarrio();
+            ventana.ShowDialog();
+        }
+
+        private void reporteDePropiedadesPorTipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepDePropiedadPorTipo ventana = new RepDePropiedadPorTipo();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDePropiedadesPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDePropPorBarrio ventana = new ListDePropPorBarrio();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDeClientesPorLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListClientesPorLocalidad ventana = new ListClientesPorLocalidad();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDeDueñosPorLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDeDueñosPorLocalidad ventana = new ListDeDueñosPorLocalidad();
+            ventana.ShowDialog();
+        }
+
+        private void repPublicRealizadasEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepDePublicidadesEnRangoDeFechas ventana = new RepDePublicidadesEnRangoDeFechas();
+            ventana.ShowDialog();
+        }
+
+        private void repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepDeFacturasEnRangoDeFechas ventana = new RepDeFacturasEnRangoDeFechas();
+            ventana.ShowDialog();
+        }
+
+        private void repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepDeOperacionesEnRangoDeFechas ventana = new RepDeOperacionesEnRangoDeFechas();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDeRecibosGeneradosEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDeRecibosEnRangoDeFechas ventana = new ListDeRecibosEnRangoDeFechas();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDeEdificiosPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDeEdificiosPorBarrio ventana = new ListDeEdificiosPorBarrio();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDePropiedadesPorTipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDePropiedadesPorTipo ventana = new ListDePropiedadesPorTipo();
+            ventana.ShowDialog();
+        }
+
+        private void listadoDeDepartamentosPorEncargadoDeExpensasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListDeDeptosPorEncDeExpensas ventana = new ListDeDeptosPorEncDeExpensas();
+            ventana.ShowDialog();
+        }
+
+        private void reporteDeExpensasMensualesPorEdificioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RepDeExpensasMensualesPorEdif ventana = new RepDeExpensasMensualesPorEdif();
             ventana.ShowDialog();
         }
     }
