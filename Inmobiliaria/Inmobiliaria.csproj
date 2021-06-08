@@ -373,6 +373,90 @@
     <Compile Include="Formularios\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.Designer.cs">
+      <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.Designer.cs">
+      <DependentUpon>ListDeDeptosPorEncDeExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDueñosPorLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDueñosPorLocalidad.Designer.cs">
+      <DependentUpon>ListDeDueñosPorLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.Designer.cs">
+      <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.Designer.cs">
+      <DependentUpon>ListDePropiedadesPorTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.Designer.cs">
+      <DependentUpon>ListDePropPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.Designer.cs">
+      <DependentUpon>ListDeRecibosEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.Designer.cs">
+      <DependentUpon>ListEmpleadosPorPatronApe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeExpensasMensualesPorEdif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeExpensasMensualesPorEdif.Designer.cs">
+      <DependentUpon>RepDeExpensasMensualesPorEdif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDeFacturasEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDeOperacionesEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.Designer.cs">
+      <DependentUpon>RepDePropiedadPorTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDePublicidadesEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.Designer.cs">
+      <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -554,9 +638,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
       <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
-	</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroExpensas.resx">
-	<DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
       <DependentUpon>frmRegistroFactura.cs</DependentUpon>
