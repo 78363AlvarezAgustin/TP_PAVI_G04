@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Inmobiliaria</RootNamespace>
     <AssemblyName>Inmobiliaria</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -520,6 +521,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
     <EmbeddedResource Include="Formularios\frmABMDueños.resx">
       <DependentUpon>frmABMDueños.cs</DependentUpon>
     </EmbeddedResource>
@@ -654,6 +656,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.resx">
+      <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
       <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
