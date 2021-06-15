@@ -94,6 +94,11 @@
     <Compile Include="AccesoADatos\Transacciones\AD_PropiedadInteresClientes.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
+    <Compile Include="BD3K7G04_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Barrio.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Departamento.cs" />
@@ -657,6 +662,12 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.resx">
+      <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.resx">
+      <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.resx">
       <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -686,6 +697,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListDeEdificiosPorBarrio.rdlc" />
+    <EmbeddedResource Include="ReporteClientesPorLocalidad.rdlc" />
+    <None Include="BD3K7G04_2021DataSet.xsc">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G04_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xss">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
