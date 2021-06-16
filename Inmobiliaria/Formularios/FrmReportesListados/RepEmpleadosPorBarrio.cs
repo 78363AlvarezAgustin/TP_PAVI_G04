@@ -16,5 +16,11 @@ namespace Inmobiliaria.Formularios.FrmReportesListados
         {
             InitializeComponent();
         }
+
+        private void RepEmpleadosPorBarrio_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCB4E279-85F2-4466-80FE-CC083E8E4A8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Inmobiliaria</RootNamespace>
+    <AssemblyName>Inmobiliaria</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccesoADatos\AD_Barrio.cs" />
+    <Compile Include="AccesoADatos\AD_Barrios.cs" />
+    <Compile Include="AccesoADatos\AD_Clientes.cs" />
+    <Compile Include="AccesoADatos\AD_Departamentos.cs" />
+    <Compile Include="AccesoADatos\AD_Deptos.cs" />
+    <Compile Include="AccesoADatos\AD_Dueños.cs" />
+    <Compile Include="AccesoADatos\AD_Edificios.cs" />
+    <Compile Include="AccesoADatos\AD_Empleados.cs" />
+    <Compile Include="AccesoADatos\AD_EncExpensas.cs" />
+    <Compile Include="AccesoADatos\AD_Escribanos.cs" />
+    <Compile Include="AccesoADatos\AD_Localidades.cs" />
+    <Compile Include="AccesoADatos\AD_MediosPago.cs" />
+    <Compile Include="AccesoADatos\AD_Monedas.cs" />
+    <Compile Include="AccesoADatos\AD_Propiedades.cs" />
+    <Compile Include="AccesoADatos\AD_Proveedores.cs" />
+    <Compile Include="AccesoADatos\AD_Provincias.cs" />
+    <Compile Include="AccesoADatos\AD_MediosPublicidad.cs" />
+    <Compile Include="AccesoADatos\AD_Secciones.cs" />
+    <Compile Include="AccesoADatos\AD_TipoDoc.cs" />
+    <Compile Include="AccesoADatos\AD_TiposOperaciones.cs" />
+    <Compile Include="AccesoADatos\AD_TiposPropiedades.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_DueñoXPropiedad.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Expensas.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Facturas.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Gastos.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_PropiedadInteresClientes.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
+    <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
+    <Compile Include="BD3K7G04_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Barrio.cs" />
+    <Compile Include="Entidades\Clientes.cs" />
+    <Compile Include="Entidades\Departamento.cs" />
+    <Compile Include="Entidades\Depto.cs" />
+    <Compile Include="Entidades\Dueños.cs" />
+    <Compile Include="Entidades\Edificios.cs" />
+    <Compile Include="Entidades\Empleados.cs" />
+    <Compile Include="Entidades\EncExpensas.cs" />
+    <Compile Include="Entidades\Escribano.cs" />
+    <Compile Include="Entidades\Gastos.cs" />
+    <Compile Include="Entidades\Expensas.cs" />
+    <Compile Include="Entidades\MediosPago.cs" />
+    <Compile Include="Entidades\Moneda.cs" />
+    <Compile Include="Entidades\Localidades.cs" />
+    <Compile Include="Entidades\Propiedad.cs" />
+    <Compile Include="Entidades\Proveedor.cs" />
+    <Compile Include="Entidades\Provincia.cs" />
+    <Compile Include="Entidades\MedioPublicidad.cs" />
+    <Compile Include="Entidades\Publicidad.cs" />
+    <Compile Include="Entidades\Recibo.cs" />
+    <Compile Include="Entidades\TipoDoc.cs" />
+    <Compile Include="Entidades\TipoPropiedad.cs" />
+    <Compile Include="Formularios\frmABMEdificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMEdificios.Designer.cs">
+      <DependentUpon>frmABMEdificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmABMMediosPublic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMMediosPublic.Designer.cs">
+      <DependentUpon>frmABMMediosPublic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoDocumento.Designer.cs">
+      <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoProp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMTipoProp.Designer.cs">
+      <DependentUpon>frmABMTipoProp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaBarrio.Designer.cs">
+      <DependentUpon>frmAltaBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaDepto.Designer.cs">
+      <DependentUpon>frmAltaDepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEmpleado.Designer.cs">
+      <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEncExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEncExpensas.Designer.cs">
+      <DependentUpon>frmAltaEncExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEscribanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaEscribanos.Designer.cs">
+      <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMediosPago.Designer.cs">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaMoneda.Designer.cs">
+      <DependentUpon>frmAltaMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaLocalidad.Designer.cs">
+      <DependentUpon>frmAltaLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaPropiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaPropiedades.Designer.cs">
+      <DependentUpon>frmAltaPropiedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaProveedor.Designer.cs">
+      <DependentUpon>frmAltaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaProvincia.Designer.cs">
+      <DependentUpon>frmAltaProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroBarrios.Designer.cs">
+      <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDeptos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDeptos.Designer.cs">
+      <DependentUpon>frmFiltroDeptos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDocumentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDocumentos.Designer.cs">
+      <DependentUpon>frmFiltroDocumentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDueños.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDueños.Designer.cs">
+      <DependentUpon>frmFiltroDueños.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEdificios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEdificios.Designer.cs">
+      <DependentUpon>frmFiltroEdificios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEmpleados.Designer.cs">
+      <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEncExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEncExpensas.Designer.cs">
+      <DependentUpon>frmFiltroEncExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEscribanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroEscribanos.Designer.cs">
+      <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMedioPago.Designer.cs">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroMoneda.Designer.cs">
+      <DependentUpon>frmFiltroMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroLocalidades.Designer.cs">
+      <DependentUpon>frmFiltroLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroPropiedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroPropiedades.Designer.cs">
+      <DependentUpon>frmFiltroPropiedades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmAltaDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAltaDepartamento.Designer.cs">
+      <DependentUpon>frmAltaDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDepartamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroDepartamentos.Designer.cs">
+      <DependentUpon>frmFiltroDepartamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroProveedores.Designer.cs">
+      <DependentUpon>frmFiltroProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroProvincias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFiltroProvincias.Designer.cs">
+      <DependentUpon>frmFiltroProvincias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarBarrios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarBarrios.Designer.cs">
+      <DependentUpon>frmModificarEliminarBarrios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmABMDueños.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmABMDueños.Designer.cs">
+      <DependentUpon>frmABMDueños.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarDepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarDepto.Designer.cs">
+      <DependentUpon>frmModificarEliminarDepto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarEncExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarEncExpensas.Designer.cs">
+      <DependentUpon>frmModificarEliminarEncExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarEscribano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarEscribano.Designer.cs">
+      <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarMoneda.Designer.cs">
+      <DependentUpon>frmModificarEliminarMoneda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarPropiedad.Designer.cs">
+      <DependentUpon>frmModificarEliminarPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarDepartamento.Designer.cs">
+      <DependentUpon>frmModificarEliminarDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarProveedor.Designer.cs">
+      <DependentUpon>frmModificarEliminarProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEliminarProvincia.Designer.cs">
+      <DependentUpon>frmModificarEliminarProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarEmpleado.Designer.cs">
+      <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarLocalidad.Designer.cs">
+      <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmModificarMediosPago.Designer.cs">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.Designer.cs">
+      <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.Designer.cs">
+      <DependentUpon>ListDeDeptosPorEncDeExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDueñosPorLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeDueñosPorLocalidad.Designer.cs">
+      <DependentUpon>ListDeDueñosPorLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.Designer.cs">
+      <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.Designer.cs">
+      <DependentUpon>ListDePropiedadesPorTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.Designer.cs">
+      <DependentUpon>ListDePropPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.Designer.cs">
+      <DependentUpon>ListDeRecibosEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.Designer.cs">
+      <DependentUpon>ListEmpleadosPorPatronApe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeExpensasMensualesPorEdif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeExpensasMensualesPorEdif.Designer.cs">
+      <DependentUpon>RepDeExpensasMensualesPorEdif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDeFacturasEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDeOperacionesEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.Designer.cs">
+      <DependentUpon>RepDePropiedadPorTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.Designer.cs">
+      <DependentUpon>RepDePublicidadesEnRangoDeFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.Designer.cs">
+      <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.Designer.cs">
+      <DependentUpon>frmAltaDueñosXPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaPublicidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmAltaPublicidad.Designer.cs">
+      <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.Designer.cs">
+      <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroExpensas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroExpensas.Designer.cs">
+      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroFactura.Designer.cs">
+      <DependentUpon>frmRegistroFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroGastos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroGastos.Designer.cs">
+      <DependentUpon>frmRegistroGastos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmTransacciones\frmRegistroRecibo.Designer.cs">
+      <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
+    <EmbeddedResource Include="Formularios\frmABMDueños.resx">
+      <DependentUpon>frmABMDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMEdificios.resx">
+      <DependentUpon>frmABMEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMMediosPublic.resx">
+      <DependentUpon>frmABMMediosPublic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMTipoDocumento.resx">
+      <DependentUpon>frmABMTipoDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmABMTipoProp.resx">
+      <DependentUpon>frmABMTipoProp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaBarrio.resx">
+      <DependentUpon>frmAltaBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaDepto.resx">
+      <DependentUpon>frmAltaDepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaEmpleado.resx">
+      <DependentUpon>frmAltaEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaEncExpensas.resx">
+      <DependentUpon>frmAltaEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaEscribanos.resx">
+      <DependentUpon>frmAltaEscribanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaMediosPago.resx">
+      <DependentUpon>frmAltaMediosPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaMoneda.resx">
+      <DependentUpon>frmAltaMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaLocalidad.resx">
+      <DependentUpon>frmAltaLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaPropiedades.resx">
+      <DependentUpon>frmAltaPropiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaProveedor.resx">
+      <DependentUpon>frmAltaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaProvincia.resx">
+      <DependentUpon>frmAltaProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
+      <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDueños.resx">
+      <DependentUpon>frmFiltroDueños.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEdificios.resx">
+      <DependentUpon>frmFiltroEdificios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDeptos.resx">
+      <DependentUpon>frmFiltroDeptos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEmpleados.resx">
+      <DependentUpon>frmFiltroEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEncExpensas.resx">
+      <DependentUpon>frmFiltroEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroEscribanos.resx">
+      <DependentUpon>frmFiltroEscribanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroMedioPago.resx">
+      <DependentUpon>frmFiltroMedioPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroMoneda.resx">
+      <DependentUpon>frmFiltroMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroLocalidades.resx">
+      <DependentUpon>frmFiltroLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroPropiedades.resx">
+      <DependentUpon>frmFiltroPropiedades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAltaDepartamento.resx">
+      <DependentUpon>frmAltaDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroDepartamentos.resx">
+      <DependentUpon>frmFiltroDepartamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroProveedores.resx">
+      <DependentUpon>frmFiltroProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFiltroProvincias.resx">
+      <DependentUpon>frmFiltroProvincias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarBarrios.resx">
+      <DependentUpon>frmModificarEliminarBarrios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarDepto.resx">
+      <DependentUpon>frmModificarEliminarDepto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarEncExpensas.resx">
+      <DependentUpon>frmModificarEliminarEncExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarEscribano.resx">
+      <DependentUpon>frmModificarEliminarEscribano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarMoneda.resx">
+      <DependentUpon>frmModificarEliminarMoneda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarPropiedad.resx">
+      <DependentUpon>frmModificarEliminarPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarDepartamento.resx">
+      <DependentUpon>frmModificarEliminarDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarProveedor.resx">
+      <DependentUpon>frmModificarEliminarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEliminarProvincia.resx">
+      <DependentUpon>frmModificarEliminarProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarEmpleado.resx">
+      <DependentUpon>frmModificarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarLocalidad.resx">
+      <DependentUpon>frmModificarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmModificarMediosPago.resx">
+      <DependentUpon>frmModificarMediosPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.resx">
+      <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.resx">
+      <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.resx">
+      <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistrarPropiedadInteresParaClientes.resx">
+      <DependentUpon>frmRegistrarPropiedadInteresParaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroExpensas.resx">
+      <DependentUpon>frmRegistroExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroFactura.resx">
+      <DependentUpon>frmRegistroFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaDueñosXPropiedad.resx">
+      <DependentUpon>frmAltaDueñosXPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmAltaPublicidad.resx">
+      <DependentUpon>frmAltaPublicidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroGastos.resx">
+      <DependentUpon>frmRegistroGastos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroRecibo.resx">
+      <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDeEdificiosPorBarrio.rdlc" />
+    <EmbeddedResource Include="ReporteClientesPorLocalidad.rdlc" />
+    <None Include="BD3K7G04_2021DataSet.xsc">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G04_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xss">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\ABM_Departamentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_Building_3870065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\ABM_Departamentos.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_add1-_32378.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_reload_46828.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_2_2739118.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_Cancel_728918.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_trash-bin-garbage-delete-rubbish-waste_3643729.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_compose_1055085.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconos1\iconfinder_floppy_285657.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa_inmobiliaria.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_user-group_285648.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
