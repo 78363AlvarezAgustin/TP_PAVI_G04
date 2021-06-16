@@ -662,6 +662,9 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.resx">
+      <DependentUpon>ListEmpleadosPorPatronApe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.resx">
       <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
     </EmbeddedResource>
