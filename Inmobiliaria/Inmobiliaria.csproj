@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetFacturasOperaciones.xsd</DependentUpon>
     </Compile>
+    <Compile Include="BD3K7G04_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Barrio.cs" />
     <Compile Include="Entidades\Clientes.cs" />
     <Compile Include="Entidades\Departamento.cs" />
@@ -666,6 +671,15 @@
     <EmbeddedResource Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.resx">
       <DependentUpon>RepDeFacturasEnRangoDeFechas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.resx">
+      <DependentUpon>ListEmpleadosPorPatronApe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListClientesPorLocalidad.resx">
+      <DependentUpon>ListClientesPorLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.resx">
+      <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.resx">
       <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +719,19 @@
     </None>
     <None Include="DataSetFacturasOperaciones.xss">
       <DependentUpon>DataSetFacturasOperaciones.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="ListDeEdificiosPorBarrio.rdlc" />
+    <EmbeddedResource Include="ReporteClientesPorLocalidad.rdlc" />
+    <None Include="BD3K7G04_2021DataSet.xsc">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BD3K7G04_2021DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BD3K7G04_2021DataSet.xss">
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
