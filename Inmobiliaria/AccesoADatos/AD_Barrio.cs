@@ -198,6 +198,42 @@ namespace Inmobiliaria.AccesoADatos
                 cn.Close();
             }
         }
+        public static DataTable ObtenerDueñosXLocalidad(string parametro)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            int.Parse(parametro);
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+               // string consulta = "SELECT id_barrio, n_barrio, n_localidad FROM barrios INNER JOIN localidades ON barrios.id_localidad = localidades.id_localidad where n_barrio = @barrio";
+
+                string consulta = "SELECT * FROM dueños INNER JOIN barrios ON dueños.id_barrio = barrios.id_barrio where barrios.id_localidad = @barrio_id";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@barrio_id", parametro);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
    

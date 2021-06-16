@@ -601,7 +601,7 @@ namespace Inmobiliaria
             // 
             this.listadoDeClientesPorLocalidadToolStripMenuItem.Name = "listadoDeClientesPorLocalidadToolStripMenuItem";
             this.listadoDeClientesPorLocalidadToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
-            this.listadoDeClientesPorLocalidadToolStripMenuItem.Text = "Listado de clientes por localidad";
+            this.listadoDeClientesPorLocalidadToolStripMenuItem.Text = "Listado de clientes por designacion catrastal";
             this.listadoDeClientesPorLocalidadToolStripMenuItem.Click += new System.EventHandler(this.listadoDeClientesPorLocalidadToolStripMenuItem_Click);
             // 
             // listadoDeDueñosPorLocalidadToolStripMenuItem
