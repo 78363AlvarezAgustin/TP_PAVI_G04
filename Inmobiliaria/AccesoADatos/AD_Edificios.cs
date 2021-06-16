@@ -227,7 +227,7 @@ namespace Inmobiliaria.AccesoADatos
 
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT * from edificios where n_edificio like '" + nombreEdif + "'";
+                string consulta = "SELECT * from edificios where n_edificio like '%" + nombreEdif + "%'";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;

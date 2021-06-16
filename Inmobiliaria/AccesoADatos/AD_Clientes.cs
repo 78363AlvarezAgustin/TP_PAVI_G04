@@ -54,7 +54,7 @@ namespace Inmobiliaria.AccesoADatos
 
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT * from clientes_x_propiedades where nro_documento_c like '" + nroDocumento + "'";
+                string consulta = "SELECT * from clientes_x_propiedades where nro_documento_c like '%" + nroDocumento + "%'";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;
@@ -90,7 +90,7 @@ namespace Inmobiliaria.AccesoADatos
 
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT * from clientes_x_propiedades where designacion_catastral like '" + designacion + "'";
+                string consulta = "SELECT * from clientes_x_propiedades where designacion_catastral like '%" + designacion + "%'";
 
                 cmd.Parameters.Clear();
                 cmd.CommandType = CommandType.Text;

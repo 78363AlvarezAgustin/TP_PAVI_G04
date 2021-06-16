@@ -50,7 +50,7 @@ namespace Inmobiliaria.Formularios.FrmReportesListados
         {
             this.reportViewer1.RefreshReport();
             DataTable tabla = new DataTable();
-            tabla = AD_Clientes.ObtenerClienteYDesigCatastralPorDocumento(txtDni.Text);
+            tabla = AD_Clientes.ObtenerClienteYDesigCatastralPorDesignacion(txtDes.Text);
 
             ReportDataSource ds = new ReportDataSource("DatosClientesPorLocalidad", tabla);
 
