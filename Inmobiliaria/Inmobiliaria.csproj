@@ -704,6 +704,8 @@
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroRecibo.resx">
       <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InformeDueñosXLocalidades.rdlc" />
+    <EmbeddedResource Include="InformePublicidadesXFecha.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

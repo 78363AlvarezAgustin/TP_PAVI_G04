@@ -48,7 +48,7 @@ namespace Inmobiliaria.Formularios.FrmReportesListados
                 if (tabla.Rows.Count > 0)
                 {
                     ReportDataSource ds = new ReportDataSource("DataSetPublicidades", tabla);
-                    reportViewer1.LocalReport.ReportEmbeddedResource = "Inmobiliaria.Formularios.FrmReportesListados.InformePublicidadesXFecha.rdlc";
+                    reportViewer1.LocalReport.ReportEmbeddedResource = "Inmobiliaria.InformePublicidadesXFecha.rdlc";
                     reportViewer1.LocalReport.DataSources.Clear();
                     reportViewer1.LocalReport.DataSources.Add(ds);//agregar data set
                     reportViewer1.RefreshReport();
