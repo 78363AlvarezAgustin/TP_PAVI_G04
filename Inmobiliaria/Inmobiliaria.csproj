@@ -226,6 +226,48 @@
     <Compile Include="Formularios\frmAltaProvincia.Designer.cs">
       <DependentUpon>frmAltaProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaDeImporteTotalDeComisionesMensuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaDeImporteTotalDeComisionesMensuales.Designer.cs">
+      <DependentUpon>frmEstadisticaDeImporteTotalDeComisionesMensuales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteDeReciboRealizadaPorMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteDeReciboRealizadaPorMes.Designer.cs">
+      <DependentUpon>frmEstadisticaImporteDeReciboRealizadaPorMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaEmpleadosPorBarrio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaEmpleadosPorBarrio.Designer.cs">
+      <DependentUpon>frmEstadisticaEmpleadosPorBarrio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaExpenCobradasMensualEdificio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaExpenCobradasMensualEdificio.Designer.cs">
+      <DependentUpon>frmEstadisticaExpenCobradasMensualEdificio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaGastosDeUnMesPorCadaProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaGastosDeUnMesPorCadaProveedor.Designer.cs">
+      <DependentUpon>frmEstadisticaGastosDeUnMesPorCadaProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad.Designer.cs">
+      <DependentUpon>frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario.Designer.cs">
+      <DependentUpon>frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmFiltroBarrios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -574,6 +616,27 @@
     <EmbeddedResource Include="Formularios\frmAltaProvincia.resx">
       <DependentUpon>frmAltaProvincia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaDeImporteTotalDeComisionesMensuales.resx">
+      <DependentUpon>frmEstadisticaDeImporteTotalDeComisionesMensuales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaEmpleadosPorBarrio.resx">
+      <DependentUpon>frmEstadisticaEmpleadosPorBarrio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaExpenCobradasMensualEdificio.resx">
+      <DependentUpon>frmEstadisticaExpenCobradasMensualEdificio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaGastosDeUnMesPorCadaProveedor.resx">
+      <DependentUpon>frmEstadisticaGastosDeUnMesPorCadaProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaImporteDeReciboRealizadaPorMes.resx">
+      <DependentUpon>frmEstadisticaImporteDeReciboRealizadaPorMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad.resx">
+      <DependentUpon>frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmEstadisticas\frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario.resx">
+      <DependentUpon>frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmFiltroBarrios.resx">
       <DependentUpon>frmFiltroBarrios.cs</DependentUpon>
     </EmbeddedResource>
@@ -814,6 +877,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConjuntoDeDatos\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

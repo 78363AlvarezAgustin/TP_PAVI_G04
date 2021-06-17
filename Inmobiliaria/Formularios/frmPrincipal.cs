@@ -1,4 +1,5 @@
 ﻿using Inmobiliaria.Formularios;
+using Inmobiliaria.Formularios.FrmEstadisticas;
 using Inmobiliaria.Formularios.FrmReportesListados;
 using Inmobiliaria.Formularios.FrmTransacciones;
 using System;
@@ -233,6 +234,48 @@ namespace Inmobiliaria
         private void reporteDeExpensasMensualesPorEdificioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RepDeExpensasMensualesPorEdif ventana = new RepDeExpensasMensualesPorEdif();
+            ventana.ShowDialog();
+        }
+
+        private void empleadosPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaEmpleadosPorBarrio ventana = new frmEstadisticaEmpleadosPorBarrio();
+            ventana.ShowDialog();
+        }
+
+        private void importeTotalDeComisionesMensualesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaDeImporteTotalDeComisionesMensuales ventana = new frmEstadisticaDeImporteTotalDeComisionesMensuales();
+            ventana.ShowDialog();
+        }
+
+        private void importesDeRecibosRealizadasPorMesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaImporteDeReciboRealizadaPorMes ventana = new frmEstadisticaImporteDeReciboRealizadaPorMes();
+            ventana.ShowDialog();
+        }
+
+        private void expensasCobradasMensualmentePorEdificioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaExpenCobradasMensualEdificio ventana = new frmEstadisticaExpenCobradasMensualEdificio();
+            ventana.ShowDialog();
+        }
+
+        private void gastosMensualesPorCadaProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaGastosDeUnMesPorCadaProveedor ventana = new frmEstadisticaGastosDeUnMesPorCadaProveedor();
+            ventana.ShowDialog();
+        }
+
+        private void importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad ventana = new frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad();
+            ventana.ShowDialog();
+        }
+
+        private void importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario ventana = new frmEstadisticaImporteTotalGastadoEnPublicidPorIdDeMedioPublicitario();
             ventana.ShowDialog();
         }
     }
