@@ -87,7 +87,7 @@ namespace Inmobiliaria.Formularios.FrmReportesListados
             {
                 ReportDataSource ds = new ReportDataSource("DataSetDueñosXLocalidades", tabla);
 
-                reportViewer1.LocalReport.ReportEmbeddedResource = "Inmobiliaria.Formularios.FrmReportesListados.InformeDueñosXLocalidades.rdlc";
+                reportViewer1.LocalReport.ReportEmbeddedResource = "Inmobiliaria.InformeDueñosXLocalidades.rdlc";
 
 
 
