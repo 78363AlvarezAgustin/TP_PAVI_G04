@@ -442,12 +442,6 @@
     <Compile Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.Designer.cs">
       <DependentUpon>ListDePropiedadesPorTipo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmReportesListados\ListDePropPorBarrio.Designer.cs">
-      <DependentUpon>ListDePropPorBarrio.cs</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -471,18 +465,6 @@
     </Compile>
     <Compile Include="Formularios\FrmReportesListados\RepDeFacturasEnRangoDeFechas.Designer.cs">
       <DependentUpon>RepDeFacturasEnRangoDeFechas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmReportesListados\RepDeOperacionesEnRangoDeFechas.Designer.cs">
-      <DependentUpon>RepDeOperacionesEnRangoDeFechas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FrmReportesListados\RepDePropiedadPorTipo.Designer.cs">
-      <DependentUpon>RepDePropiedadPorTipo.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.cs">
       <SubType>Form</SubType>

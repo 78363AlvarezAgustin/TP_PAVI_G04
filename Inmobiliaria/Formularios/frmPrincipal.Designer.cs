@@ -87,13 +87,10 @@ namespace Inmobiliaria
             this.vistasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listEmpleadosPorPatronApeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeEmpleadosPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDePropiedadesPorTipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeClientesPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeDueñosPorLocalidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repPublicRealizadasEnUnRangoDeFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeRecibosGeneradosEnUnRangoDeFechasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDeEdificiosPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listadoDePropiedadesPorTipoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -553,13 +550,10 @@ namespace Inmobiliaria
             this.vistasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.listEmpleadosPorPatronApeToolStripMenuItem,
             this.reporteDeEmpleadosPorBarrioToolStripMenuItem,
-            this.reporteDePropiedadesPorTipoToolStripMenuItem,
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem,
             this.listadoDeClientesPorLocalidadToolStripMenuItem,
             this.listadoDeDueñosPorLocalidadToolStripMenuItem,
             this.repPublicRealizadasEnUnRangoDeFechasToolStripMenuItem,
             this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem,
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem,
             this.listadoDeRecibosGeneradosEnUnRangoDeFechasToolStripMenuItem,
             this.listadoDeEdificiosPorBarrioToolStripMenuItem,
             this.listadoDePropiedadesPorTipoToolStripMenuItem,
@@ -582,20 +576,6 @@ namespace Inmobiliaria
             this.reporteDeEmpleadosPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
             this.reporteDeEmpleadosPorBarrioToolStripMenuItem.Text = "Reporte de empleados por barrio";
             this.reporteDeEmpleadosPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.reporteDeEmpleadosPorBarrioToolStripMenuItem_Click);
-            // 
-            // reporteDePropiedadesPorTipoToolStripMenuItem
-            // 
-            this.reporteDePropiedadesPorTipoToolStripMenuItem.Name = "reporteDePropiedadesPorTipoToolStripMenuItem";
-            this.reporteDePropiedadesPorTipoToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
-            this.reporteDePropiedadesPorTipoToolStripMenuItem.Text = "Reporte de propiedades por tipo";
-            this.reporteDePropiedadesPorTipoToolStripMenuItem.Click += new System.EventHandler(this.reporteDePropiedadesPorTipoToolStripMenuItem_Click);
-            // 
-            // listadoDePropiedadesPorBarrioToolStripMenuItem
-            // 
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem.Name = "listadoDePropiedadesPorBarrioToolStripMenuItem";
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem.Text = "Listado de propiedades por barrio";
-            this.listadoDePropiedadesPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.listadoDePropiedadesPorBarrioToolStripMenuItem_Click);
             // 
             // listadoDeClientesPorLocalidadToolStripMenuItem
             // 
@@ -624,13 +604,6 @@ namespace Inmobiliaria
             this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
             this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem.Text = "Rep de facturas realizadas en un rango de fechas";
             this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem.Click += new System.EventHandler(this.repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem_Click);
-            // 
-            // repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem
-            // 
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem.Name = "repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem";
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem.Size = new System.Drawing.Size(358, 22);
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem.Text = "Rep de operaciones realizadas en un rango de fechas";
-            this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem.Click += new System.EventHandler(this.repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem_Click);
             // 
             // listadoDeRecibosGeneradosEnUnRangoDeFechasToolStripMenuItem
             // 
@@ -767,13 +740,10 @@ namespace Inmobiliaria
         private System.Windows.Forms.ToolStripMenuItem registrarGastosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listEmpleadosPorPatronApeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeEmpleadosPorBarrioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDePropiedadesPorTipoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listadoDePropiedadesPorBarrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeClientesPorLocalidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeDueñosPorLocalidadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem repPublicRealizadasEnUnRangoDeFechasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeRecibosGeneradosEnUnRangoDeFechasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDeEdificiosPorBarrioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listadoDePropiedadesPorTipoToolStripMenuItem;
