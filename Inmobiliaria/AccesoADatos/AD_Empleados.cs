@@ -306,6 +306,41 @@ namespace Inmobiliaria.AccesoADatos
             }
         }
 
+        public static DataTable ObtenerEmpleadosXBarrio(int parametro)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                //string consulta = "SELECT * from empleados where legajo = @legajo";
+                string consulta = "SELECT * FROM empleados INNER JOIN barrios ON empleados.id_barrio = barrios.id_barrio  WHERE empleados.id_barrio = @id_barrio";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@id_barrio", parametro);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
         public static DataTable ObtenerEmpleados()
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
@@ -315,10 +350,10 @@ namespace Inmobiliaria.AccesoADatos
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT * from empleados";
+                string consulta = "SELECT * FROM empleados";
 
                 cmd.Parameters.Clear();
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
 
@@ -333,7 +368,7 @@ namespace Inmobiliaria.AccesoADatos
                 return tabla;
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 throw;
             }
@@ -341,6 +376,40 @@ namespace Inmobiliaria.AccesoADatos
             {
                 cn.Close();
 
+            }
+        }
+
+        public static DataTable ObtenerEmpleadoXApellido(string parametro)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT * from empleados where apellido_empleado like '%" + parametro + "%'";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }
