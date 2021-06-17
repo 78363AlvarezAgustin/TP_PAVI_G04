@@ -81,5 +81,45 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
 
             }
         }
+
+
+        public static DataTable ObtenerExpensasPorMesYAño(int mes, int año)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT Ed.n_edificio, Ex.importe FROM edificios Ed INNER JOIN expensas Ex ON Ed.id_edificio = Ex.id_edificio WHERE mes like @mes AND año like @año";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mes", mes);
+                cmd.Parameters.AddWithValue("@año", año);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
     }
 }
