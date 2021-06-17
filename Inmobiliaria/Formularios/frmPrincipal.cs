@@ -182,18 +182,6 @@ namespace Inmobiliaria
             ventana.ShowDialog();
         }
 
-        private void reporteDePropiedadesPorTipoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RepDePropiedadPorTipo ventana = new RepDePropiedadPorTipo();
-            ventana.ShowDialog();
-        }
-
-        private void listadoDePropiedadesPorBarrioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ListDePropPorBarrio ventana = new ListDePropPorBarrio();
-            ventana.ShowDialog();
-        }
-
         private void listadoDeClientesPorLocalidadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListClientesPorLocalidad ventana = new ListClientesPorLocalidad();
@@ -215,12 +203,6 @@ namespace Inmobiliaria
         private void repDeFacturasRealizadasEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RepDeFacturasEnRangoDeFechas ventana = new RepDeFacturasEnRangoDeFechas();
-            ventana.ShowDialog();
-        }
-
-        private void repDeOperacionesRealizadasEnUnRangoDeFechasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RepDeOperacionesEnRangoDeFechas ventana = new RepDeOperacionesEnRangoDeFechas();
             ventana.ShowDialog();
         }
 
