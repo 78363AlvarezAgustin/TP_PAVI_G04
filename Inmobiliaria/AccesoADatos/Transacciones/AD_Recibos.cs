@@ -129,5 +129,46 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
                 cn.Close();
             }
         }
+
+
+        public static DataTable ObtenerRecibosPorFecha(string desde, string hasta)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "GetRecibosPorFecha";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@fechaDesde", desde);
+                cmd.Parameters.AddWithValue("@fechaHasta", hasta);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
     }
 }

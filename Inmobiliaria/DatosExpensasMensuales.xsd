@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosExpensasMensuales" targetNamespace="http://tempuri.org/DatosExpensasMensuales.xsd" xmlns:mstns="http://tempuri.org/DatosExpensasMensuales.xsd" xmlns="http://tempuri.org/DatosExpensasMensuales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosExpensasMensuales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosExpensasMensuales" msprop:Generator_UserDSName="DatosExpensasMensuales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tablaExpensasMensuales" msprop:Generator_TableClassName="tablaExpensasMensualesDataTable" msprop:Generator_TableVarName="tabletablaExpensasMensuales" msprop:Generator_TablePropName="tablaExpensasMensuales" msprop:Generator_RowDeletingName="tablaExpensasMensualesRowDeleting" msprop:Generator_RowChangingName="tablaExpensasMensualesRowChanging" msprop:Generator_RowEvHandlerName="tablaExpensasMensualesRowChangeEventHandler" msprop:Generator_RowDeletedName="tablaExpensasMensualesRowDeleted" msprop:Generator_UserTableName="tablaExpensasMensuales" msprop:Generator_RowChangedName="tablaExpensasMensualesRowChanged" msprop:Generator_RowEvArgName="tablaExpensasMensualesRowChangeEvent" msprop:Generator_RowClassName="tablaExpensasMensualesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="n_edificio" msprop:Generator_ColumnVarNameInTable="columnn_edificio" msprop:Generator_ColumnPropNameInRow="n_edificio" msprop:Generator_ColumnPropNameInTable="n_edificioColumn" msprop:Generator_UserColumnName="n_edificio" type="xs:string" minOccurs="0" />
+              <xs:element name="importe" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" msprop:Generator_UserColumnName="importe" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

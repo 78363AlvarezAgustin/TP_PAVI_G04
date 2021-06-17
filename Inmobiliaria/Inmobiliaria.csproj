@@ -94,6 +94,16 @@
     <Compile Include="AccesoADatos\Transacciones\AD_PropiedadInteresClientes.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Publicidad.cs" />
     <Compile Include="AccesoADatos\Transacciones\AD_Recibos.cs" />
+    <Compile Include="BD3K7G04_2021DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosExpensasMensuales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosExpensasMensuales.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetFacturasOperaciones.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -531,6 +541,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="DatosExpensasMensuales.rdlc" />
     <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
     <EmbeddedResource Include="FacturasPorFecha.rdlc" />
     <EmbeddedResource Include="Formularios\frmABMDueños.resx">
@@ -668,6 +679,12 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeRecibosEnRangoDeFechas.resx">
+      <DependentUpon>ListDeRecibosEnRangoDeFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\RepDeExpensasMensualesPorEdif.resx">
+      <DependentUpon>RepDeExpensasMensualesPorEdif.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.resx">
       <DependentUpon>ListDeDeptosPorEncDeExpensas.cs</DependentUpon>
     </EmbeddedResource>
@@ -710,6 +727,7 @@
     <EmbeddedResource Include="Formularios\FrmTransacciones\frmRegistroRecibo.resx">
       <DependentUpon>frmRegistroRecibo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoRecibosPorFecha.rdlc" />
     <EmbeddedResource Include="InformeDueñosXLocalidades.rdlc" />
     <EmbeddedResource Include="InformePublicidadesXFecha.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -742,6 +760,17 @@
     </None>
     <None Include="BD3K7G04_2021DataSet.xss">
       <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DatosExpensasMensuales.xsc">
+      <DependentUpon>DatosExpensasMensuales.xsd</DependentUpon>
+    </None>
+    <None Include="DatosExpensasMensuales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosExpensasMensuales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosExpensasMensuales.xss">
+      <DependentUpon>DatosExpensasMensuales.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -803,18 +832,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
