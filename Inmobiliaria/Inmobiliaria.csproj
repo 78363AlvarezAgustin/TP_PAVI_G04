@@ -662,6 +662,12 @@
     <EmbeddedResource Include="Formularios\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeDeptosPorEncDeExpensas.resx">
+      <DependentUpon>ListDeDeptosPorEncDeExpensas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\ListDePropiedadesPorTipo.resx">
+      <DependentUpon>ListDePropiedadesPorTipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\ListEmpleadosPorPatronApe.resx">
       <DependentUpon>ListEmpleadosPorPatronApe.cs</DependentUpon>
     </EmbeddedResource>
@@ -702,6 +708,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListDeEdificiosPorBarrio.rdlc" />
     <EmbeddedResource Include="ReporteClientesPorLocalidad.rdlc" />
+    <EmbeddedResource Include="ReporteDptosXExpensas.rdlc" />
+    <EmbeddedResource Include="RVPropTipo.rdlc" />
     <None Include="BD3K7G04_2021DataSet.xsc">
       <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
     </None>

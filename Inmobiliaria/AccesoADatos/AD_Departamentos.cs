@@ -287,5 +287,45 @@ namespace Inmobiliaria.AccesoADatos
 
             return resultado;
         }
+
+        public static DataTable ObtenerDptosPorLegajo(int Legajo)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "GetDepartamentosPorLegajo";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@legajo_encargado", Legajo);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
+
     }
 }
