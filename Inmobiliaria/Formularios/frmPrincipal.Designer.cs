@@ -97,7 +97,6 @@ namespace Inmobiliaria
             this.listadoDeDepartamentosPorEncargadoDeExpensasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeExpensasMensualesPorEdificioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.empleadosPorBarrioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importeTotalDeComisionesMensualesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importesDeRecibosRealizadasPorMesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,6 +104,7 @@ namespace Inmobiliaria
             this.gastosMensualesPorCadaProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -661,6 +661,55 @@ namespace Inmobiliaria
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.ayudaToolStripMenuItem.Text = "Estadisticas";
             // 
+            // empleadosPorBarrioToolStripMenuItem
+            // 
+            this.empleadosPorBarrioToolStripMenuItem.Name = "empleadosPorBarrioToolStripMenuItem";
+            this.empleadosPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.empleadosPorBarrioToolStripMenuItem.Text = "Empleados por Barrio";
+            this.empleadosPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.empleadosPorBarrioToolStripMenuItem_Click);
+            // 
+            // importeTotalDeComisionesMensualesToolStripMenuItem
+            // 
+            this.importeTotalDeComisionesMensualesToolStripMenuItem.Name = "importeTotalDeComisionesMensualesToolStripMenuItem";
+            this.importeTotalDeComisionesMensualesToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.importeTotalDeComisionesMensualesToolStripMenuItem.Text = "Importe de Comisiones Mensuales";
+            this.importeTotalDeComisionesMensualesToolStripMenuItem.Click += new System.EventHandler(this.importeTotalDeComisionesMensualesToolStripMenuItem_Click);
+            // 
+            // importesDeRecibosRealizadasPorMesToolStripMenuItem
+            // 
+            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Name = "importesDeRecibosRealizadasPorMesToolStripMenuItem";
+            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Text = "Importes de recibos mensuales";
+            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Click += new System.EventHandler(this.importesDeRecibosRealizadasPorMesToolStripMenuItem_Click);
+            // 
+            // expensasCobradasMensualmentePorEdificioToolStripMenuItem
+            // 
+            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Name = "expensasCobradasMensualmentePorEdificioToolStripMenuItem";
+            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Text = "Expensas cobradas mensualmente por edificio";
+            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Click += new System.EventHandler(this.expensasCobradasMensualmentePorEdificioToolStripMenuItem_Click);
+            // 
+            // gastosMensualesPorCadaProveedorToolStripMenuItem
+            // 
+            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Name = "gastosMensualesPorCadaProveedorToolStripMenuItem";
+            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Text = "Gastos mensuales por cada proveedor";
+            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Click += new System.EventHandler(this.gastosMensualesPorCadaProveedorToolStripMenuItem_Click);
+            // 
+            // importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem
+            // 
+            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Name = "importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem";
+            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Text = "Importe total gastado en publicidad por propiedad";
+            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Click += new System.EventHandler(this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem_Click);
+            // 
+            // importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem
+            // 
+            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Name = "importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem";
+            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Size = new System.Drawing.Size(432, 22);
+            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Text = "Porcentaje de importe gastado en publicidad por Medio Publicitario";
+            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Click += new System.EventHandler(this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -671,55 +720,6 @@ namespace Inmobiliaria
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // empleadosPorBarrioToolStripMenuItem
-            // 
-            this.empleadosPorBarrioToolStripMenuItem.Name = "empleadosPorBarrioToolStripMenuItem";
-            this.empleadosPorBarrioToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.empleadosPorBarrioToolStripMenuItem.Text = "Empleados por Barrio";
-            this.empleadosPorBarrioToolStripMenuItem.Click += new System.EventHandler(this.empleadosPorBarrioToolStripMenuItem_Click);
-            // 
-            // importeTotalDeComisionesMensualesToolStripMenuItem
-            // 
-            this.importeTotalDeComisionesMensualesToolStripMenuItem.Name = "importeTotalDeComisionesMensualesToolStripMenuItem";
-            this.importeTotalDeComisionesMensualesToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.importeTotalDeComisionesMensualesToolStripMenuItem.Text = "Importe de Comisiones Mensuales";
-            this.importeTotalDeComisionesMensualesToolStripMenuItem.Click += new System.EventHandler(this.importeTotalDeComisionesMensualesToolStripMenuItem_Click);
-            // 
-            // importesDeRecibosRealizadasPorMesToolStripMenuItem
-            // 
-            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Name = "importesDeRecibosRealizadasPorMesToolStripMenuItem";
-            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Text = "Importes de recibos mensuales";
-            this.importesDeRecibosRealizadasPorMesToolStripMenuItem.Click += new System.EventHandler(this.importesDeRecibosRealizadasPorMesToolStripMenuItem_Click);
-            // 
-            // expensasCobradasMensualmentePorEdificioToolStripMenuItem
-            // 
-            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Name = "expensasCobradasMensualmentePorEdificioToolStripMenuItem";
-            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Text = "Expensas cobradas mensualmente por edificio";
-            this.expensasCobradasMensualmentePorEdificioToolStripMenuItem.Click += new System.EventHandler(this.expensasCobradasMensualmentePorEdificioToolStripMenuItem_Click);
-            // 
-            // gastosMensualesPorCadaProveedorToolStripMenuItem
-            // 
-            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Name = "gastosMensualesPorCadaProveedorToolStripMenuItem";
-            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Text = "Gastos mensuales por cada proveedor";
-            this.gastosMensualesPorCadaProveedorToolStripMenuItem.Click += new System.EventHandler(this.gastosMensualesPorCadaProveedorToolStripMenuItem_Click);
-            // 
-            // importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem
-            // 
-            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Name = "importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem";
-            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Text = "Importe total gastado en publicidad por propiedad";
-            this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem.Click += new System.EventHandler(this.importeTotalGastadoEnPublicidadPorPropiedadToolStripMenuItem_Click);
-            // 
-            // importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem
-            // 
-            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Name = "importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem";
-            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Size = new System.Drawing.Size(384, 22);
-            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Text = "Importe total gastado en publicidad por medio publicitario";
-            this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem.Click += new System.EventHandler(this.importeTotalGastadoEnPublicidadPorIdDeMediosPublicitariosToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 

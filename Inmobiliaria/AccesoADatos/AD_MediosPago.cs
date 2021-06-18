@@ -49,6 +49,42 @@ namespace Inmobiliaria.AccesoADatos
             }
         }
 
+
+        public static DataTable ObtenerDatosEstadistica()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "select c.n_medio_publicitario as Medio, SUM(pc.costo_publicidad) as Importe FROM[BD3K7G04_2021].[dbo].[publicidades] pc Inner join medios_publicidad c On pc.id_medio_publicitario = c.id_medio_publicitario Group by c.n_medio_publicitario";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+
         public static DataTable ObtenerMediosPagoPorId(int id)
         {
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
