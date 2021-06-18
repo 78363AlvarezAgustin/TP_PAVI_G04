@@ -99,6 +99,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.cs">
+      <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatosEstadisticaImportePublicidadXIdMedio.cs">
       <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
     </Compile>
@@ -575,6 +583,7 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="DatosExpensasMensuales.rdlc" />
     <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
+    <EmbeddedResource Include="EstadisticasPorEmpleado.rdlc" />
     <EmbeddedResource Include="EstadisticaTotalImporteXMedioPublic.rdlc" />
     <EmbeddedResource Include="FacturasPorFecha.rdlc" />
     <EmbeddedResource Include="Formularios\frmABMDueños.resx">
@@ -789,6 +798,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xsc">
+      <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEmpleadosPorBarrio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xss">
+      <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
+    </None>
     <None Include="DataSetFacturasOperaciones.xsc">
       <DependentUpon>DataSetFacturasOperaciones.xsd</DependentUpon>
     </None>

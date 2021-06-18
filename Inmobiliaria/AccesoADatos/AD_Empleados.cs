@@ -412,5 +412,82 @@ namespace Inmobiliaria.AccesoADatos
                 cn.Close();
             }
         }
+
+        public static DataTable ObtenerEstadisticaEmpleados()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT b.n_barrio, COUNT(e.legajo) as Cantidad FROM empleados e Inner join barrios b On e.id_barrio = b.id_barrio Group by b.n_barrio";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
+
+        public static DataTable ObtenerEstadisticaEmpleadosXBarrio(string parametro)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+
+
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT b.n_barrio, COUNT(e.legajo) as Cantidad FROM empleados e Inner join barrios b On e.id_barrio = b.id_barrio where b.n_barrio like'%" + parametro + "%' Group by b.n_barrio";
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
     }
 }
