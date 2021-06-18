@@ -107,6 +107,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DatosEstadisticaImportePublicidadXIdMedio.cs">
+      <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatosEstadisticaImportePublicidadXIdMedio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatosExpensasMensuales.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -576,6 +584,7 @@
     <EmbeddedResource Include="DatosExpensasMensuales.rdlc" />
     <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
     <EmbeddedResource Include="EstadisticasPorEmpleado.rdlc" />
+    <EmbeddedResource Include="EstadisticaTotalImporteXMedioPublic.rdlc" />
     <EmbeddedResource Include="FacturasPorFecha.rdlc" />
     <EmbeddedResource Include="Formularios\frmABMDueños.resx">
       <DependentUpon>frmABMDueños.cs</DependentUpon>
@@ -826,6 +835,17 @@
     <None Include="BD3K7G04_2021DataSet.xss">
       <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
     </None>
+    <None Include="DatosEstadisticaImportePublicidadXIdMedio.xsc">
+      <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
+    </None>
+    <None Include="DatosEstadisticaImportePublicidadXIdMedio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosEstadisticaImportePublicidadXIdMedio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatosEstadisticaImportePublicidadXIdMedio.xss">
+      <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
+    </None>
     <None Include="DatosExpensasMensuales.xsc">
       <DependentUpon>DatosExpensasMensuales.xsd</DependentUpon>
     </None>
@@ -896,8 +916,10 @@
     <None Include="Resources\iconfinder_user-group_285648.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ConjuntoDeDatos\" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
