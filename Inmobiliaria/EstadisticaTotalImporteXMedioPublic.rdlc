@@ -60,8 +60,8 @@
             <rd:DefaultName>Textbox1</rd:DefaultName>
             <Top>0.44662cm</Top>
             <Left>0.97578cm</Left>
-            <Height>1.07625cm</Height>
-            <Width>17.34312cm</Width>
+            <Height>1.04979cm</Height>
+            <Width>15.99375cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -451,7 +451,7 @@
         <Height>3.7485in</Height>
         <Style />
       </Body>
-      <Width>7.21875in</Width>
+      <Width>7.21217in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
