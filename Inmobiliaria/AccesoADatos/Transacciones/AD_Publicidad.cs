@@ -128,5 +128,44 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
                 cn.Close();
             }
         }
+        public static DataTable ObtenerPublicidadesXFechayDesig(string desde, string hasta, string design)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT * FROM publicidades WHERE fecha BETWEEN @desde and @hasta and designacion_catastral = @design";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@desde", desde);
+                cmd.Parameters.AddWithValue("@hasta", hasta);
+                cmd.Parameters.AddWithValue("@design", design);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                return tabla;
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }

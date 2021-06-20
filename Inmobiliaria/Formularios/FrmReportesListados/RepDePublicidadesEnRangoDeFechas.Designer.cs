@@ -131,6 +131,7 @@ namespace Inmobiliaria.Formularios.FrmReportesListados
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(721, 473);
             this.reportViewer1.TabIndex = 9;
+            this.reportViewer1.Load += new System.EventHandler(this.reportViewer1_Load);
             // 
             // btnLimpiarCampos
             // 
