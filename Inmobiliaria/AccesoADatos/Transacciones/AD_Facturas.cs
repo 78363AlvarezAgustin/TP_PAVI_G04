@@ -190,5 +190,44 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
             }
         }
 
+
+        public static DataTable ObtenerComisionesPorAño(int año)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT MONTH(fecha) as mes, SUM(total_comision) as total_comision FROM facturas WHERE YEAR(fecha) = @año GROUP BY MONTH(fecha)";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@año", año);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
+
     }
 }
