@@ -51,17 +51,17 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             this.txtTipoPropiedad = new System.Windows.Forms.TextBox();
             this.txtDesigCatastral = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDiasOtro = new System.Windows.Forms.MaskedTextBox();
+            this.rdTotal = new System.Windows.Forms.CheckBox();
+            this.rdAnual = new System.Windows.Forms.CheckBox();
+            this.rdMensual = new System.Windows.Forms.CheckBox();
+            this.lblct = new System.Windows.Forms.Label();
+            this.chkOtro = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCargarGrillaCompleta = new System.Windows.Forms.Button();
-            this.lblct = new System.Windows.Forms.Label();
-            this.chkOtro = new System.Windows.Forms.CheckBox();
-            this.rdMensual = new System.Windows.Forms.CheckBox();
-            this.rdAnual = new System.Windows.Forms.CheckBox();
-            this.rdTotal = new System.Windows.Forms.CheckBox();
-            this.txtDiasOtro = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grillaPropiedades)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -190,7 +190,7 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             // 
             this.btnReporte.Enabled = false;
             this.btnReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReporte.Location = new System.Drawing.Point(826, 389);
+            this.btnReporte.Location = new System.Drawing.Point(839, 331);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(100, 60);
             this.btnReporte.TabIndex = 23;
@@ -272,19 +272,89 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             this.panel1.Controls.Add(this.chkOtro);
             this.panel1.Location = new System.Drawing.Point(755, 215);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(239, 135);
+            this.panel1.Size = new System.Drawing.Size(280, 89);
             this.panel1.TabIndex = 31;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(189, 38);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(31, 13);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Años";
+            // 
+            // txtDiasOtro
+            // 
+            this.txtDiasOtro.Location = new System.Drawing.Point(159, 35);
+            this.txtDiasOtro.Mask = "99";
+            this.txtDiasOtro.Name = "txtDiasOtro";
+            this.txtDiasOtro.Size = new System.Drawing.Size(24, 20);
+            this.txtDiasOtro.TabIndex = 28;
+            this.txtDiasOtro.ValidatingType = typeof(int);
+            // 
+            // rdTotal
+            // 
+            this.rdTotal.AutoSize = true;
+            this.rdTotal.Location = new System.Drawing.Point(24, 64);
+            this.rdTotal.Name = "rdTotal";
+            this.rdTotal.Size = new System.Drawing.Size(50, 17);
+            this.rdTotal.TabIndex = 27;
+            this.rdTotal.Text = "Total";
+            this.rdTotal.UseVisualStyleBackColor = true;
+            // 
+            // rdAnual
+            // 
+            this.rdAnual.AutoSize = true;
+            this.rdAnual.Location = new System.Drawing.Point(24, 38);
+            this.rdAnual.Name = "rdAnual";
+            this.rdAnual.Size = new System.Drawing.Size(62, 17);
+            this.rdAnual.TabIndex = 26;
+            this.rdAnual.Text = "Un Año";
+            this.rdAnual.UseVisualStyleBackColor = true;
+            // 
+            // rdMensual
+            // 
+            this.rdMensual.AutoSize = true;
+            this.rdMensual.Location = new System.Drawing.Point(24, 15);
+            this.rdMensual.Name = "rdMensual";
+            this.rdMensual.Size = new System.Drawing.Size(66, 17);
+            this.rdMensual.TabIndex = 25;
+            this.rdMensual.Text = "6 Meses";
+            this.rdMensual.UseVisualStyleBackColor = true;
+            // 
+            // lblct
+            // 
+            this.lblct.AutoSize = true;
+            this.lblct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblct.Location = new System.Drawing.Point(109, 38);
+            this.lblct.Name = "lblct";
+            this.lblct.Size = new System.Drawing.Size(44, 13);
+            this.lblct.TabIndex = 23;
+            this.lblct.Text = "Ultimos:";
+            // 
+            // chkOtro
+            // 
+            this.chkOtro.AutoSize = true;
+            this.chkOtro.Location = new System.Drawing.Point(159, 15);
+            this.chkOtro.Name = "chkOtro";
+            this.chkOtro.Size = new System.Drawing.Size(46, 17);
+            this.chkOtro.TabIndex = 22;
+            this.chkOtro.Text = "Otro";
+            this.chkOtro.UseVisualStyleBackColor = true;
+            this.chkOtro.CheckedChanged += new System.EventHandler(this.chkOtro_CheckedChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(804, 186);
+            this.label7.Location = new System.Drawing.Point(752, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 17);
+            this.label7.Size = new System.Drawing.Size(147, 17);
             this.label7.TabIndex = 32;
-            this.label7.Text = "Gastos en:";
+            this.label7.Text = "Gastos en los ultimos:";
             // 
             // label8
             // 
@@ -319,76 +389,6 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             this.btnCargarGrillaCompleta.Text = "Cargar todas las Propiedades";
             this.btnCargarGrillaCompleta.UseVisualStyleBackColor = true;
             this.btnCargarGrillaCompleta.Click += new System.EventHandler(this.btnCargarGrillaCompleta_Click);
-            // 
-            // lblct
-            // 
-            this.lblct.AutoSize = true;
-            this.lblct.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblct.Location = new System.Drawing.Point(109, 103);
-            this.lblct.Name = "lblct";
-            this.lblct.Size = new System.Drawing.Size(44, 13);
-            this.lblct.TabIndex = 23;
-            this.lblct.Text = "Ultimos:";
-            // 
-            // chkOtro
-            // 
-            this.chkOtro.AutoSize = true;
-            this.chkOtro.Location = new System.Drawing.Point(24, 99);
-            this.chkOtro.Name = "chkOtro";
-            this.chkOtro.Size = new System.Drawing.Size(46, 17);
-            this.chkOtro.TabIndex = 22;
-            this.chkOtro.Text = "Otro";
-            this.chkOtro.UseVisualStyleBackColor = true;
-            this.chkOtro.CheckedChanged += new System.EventHandler(this.chkOtro_CheckedChanged);
-            // 
-            // rdMensual
-            // 
-            this.rdMensual.AutoSize = true;
-            this.rdMensual.Location = new System.Drawing.Point(24, 15);
-            this.rdMensual.Name = "rdMensual";
-            this.rdMensual.Size = new System.Drawing.Size(62, 17);
-            this.rdMensual.TabIndex = 25;
-            this.rdMensual.Text = "30 Dias";
-            this.rdMensual.UseVisualStyleBackColor = true;
-            // 
-            // rdAnual
-            // 
-            this.rdAnual.AutoSize = true;
-            this.rdAnual.Location = new System.Drawing.Point(24, 38);
-            this.rdAnual.Name = "rdAnual";
-            this.rdAnual.Size = new System.Drawing.Size(62, 17);
-            this.rdAnual.TabIndex = 26;
-            this.rdAnual.Text = "Un Año";
-            this.rdAnual.UseVisualStyleBackColor = true;
-            // 
-            // rdTotal
-            // 
-            this.rdTotal.AutoSize = true;
-            this.rdTotal.Location = new System.Drawing.Point(24, 64);
-            this.rdTotal.Name = "rdTotal";
-            this.rdTotal.Size = new System.Drawing.Size(50, 17);
-            this.rdTotal.TabIndex = 27;
-            this.rdTotal.Text = "Total";
-            this.rdTotal.UseVisualStyleBackColor = true;
-            // 
-            // txtDiasOtro
-            // 
-            this.txtDiasOtro.Location = new System.Drawing.Point(159, 100);
-            this.txtDiasOtro.Mask = "999";
-            this.txtDiasOtro.Name = "txtDiasOtro";
-            this.txtDiasOtro.Size = new System.Drawing.Size(24, 20);
-            this.txtDiasOtro.TabIndex = 28;
-            this.txtDiasOtro.ValidatingType = typeof(int);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(189, 103);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(28, 13);
-            this.label9.TabIndex = 29;
-            this.label9.Text = "Dias";
             // 
             // frmEstadisticaImporteTotalGastadoEnPublicidadPorPropiedad
             // 

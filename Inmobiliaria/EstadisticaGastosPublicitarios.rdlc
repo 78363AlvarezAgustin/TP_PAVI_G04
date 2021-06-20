@@ -76,7 +76,9 @@
                       <ChartDataLabel>
                         <Style />
                       </ChartDataLabel>
-                      <Style />
+                      <Style>
+                        <Color>SeaGreen</Color>
+                      </Style>
                       <ChartMarker>
                         <Style />
                       </ChartMarker>
@@ -403,7 +405,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Estadistica de Gastos Publicitarios por Propiedad</Value>
+                    <Value>Gráfico de Gastos Publicitarios por Propiedad</Value>
                     <Style>
                       <FontSize>16pt</FontSize>
                     </Style>
