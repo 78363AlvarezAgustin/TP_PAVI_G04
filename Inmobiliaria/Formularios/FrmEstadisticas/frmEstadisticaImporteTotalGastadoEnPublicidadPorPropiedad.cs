@@ -59,7 +59,7 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
                 reportViewer1.LocalReport.DataSources.Add(ds);//agregar data set
                 reportViewer1.LocalReport.Refresh();
                 reportViewer1.RefreshReport();
-                limpiarCampos();
+                
             }
             else
             {
@@ -132,54 +132,13 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
         private DataTable CalcularImporteEnPublicidades()
         {
             DataTable res = CrearTablaEstadistica();
-
-
-
-
             DateTime hoy = DateTime.Today;
+
+
             if(rdMensual.Checked || rdAnual.Checked || rdTotal.Checked || chkOtro.Checked)
             {
-                if (rdMensual.Checked)
-                {
-                    DateTime mensual = hoy.AddDays(-30);
-                    DataTable tabla = AD_Publicidad.ObtenerPublicidadesXFechayDesig(mensual.ToString(), hoy.ToString(), txtDesigCatastral.Text);
-                    int total = CalcularImporte(tabla);
-                    res = AddRowEstadistica(res, "30 Dias", total);
+                GenerarEstadistica(hoy, res);
 
-                }
-                if (rdAnual.Checked)
-                {
-                    DateTime anual = hoy.AddDays(-365);
-                    DataTable tabla = AD_Publicidad.ObtenerPublicidadesXFechayDesig(anual.ToString(), hoy.ToString(), txtDesigCatastral.Text);
-                    int total = CalcularImporte(tabla);
-                    res = AddRowEstadistica(res, "365 Dias", total);
-
-                }
-                if (rdTotal.Checked)
-                {
-                    DateTime tot = hoy.AddYears(-50);
-                    DataTable tabla = AD_Publicidad.ObtenerPublicidadesXFechayDesig(tot.ToString(), hoy.ToString(), txtDesigCatastral.Text);
-                    int total = CalcularImporte(tabla);
-                    res = AddRowEstadistica(res, "Inicio de los tiempos", total);
-
-
-                }
-                if (chkOtro.Checked)
-                {
-                    if (txtDiasOtro.Text != "")
-                    {
-                        DateTime diasSelect = hoy.AddDays(int.Parse(txtDiasOtro.Text)*-1);
-                        DataTable tabla = AD_Publicidad.ObtenerPublicidadesXFechayDesig(diasSelect.ToString(), hoy.ToString(), txtDesigCatastral.Text);
-                        int total = CalcularImporte(tabla);
-                        res = AddRowEstadistica(res, (txtDiasOtro.Text + " Dias"), total);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Se debe completar el campo de cantidad de dias para continuar");
-                        txtDiasOtro.Focus();
-                    }
-
-                }
             }
             else
             {
@@ -192,6 +151,58 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             return res;
             
         }
+        private DataTable GenerarEstadistica(DateTime hoy, DataTable res)
+        {
+            if (rdMensual.Checked)
+            {
+                DateTime mensual = hoy.AddMonths(-6);
+                DataTable tabla0 = AD_Publicidad.ObtenerPublicidadesXFechayDesig(mensual.ToString(), hoy.ToString(), txtDesigCatastral.Text);
+                int total = CalcularImporte(tabla0);
+                res = AddRowEstadistica(res, "6 Meses", total);
+
+            };
+
+
+            if (rdAnual.Checked)
+            {
+                DateTime anual = hoy.AddYears(-1);
+                DataTable tabla1 = AD_Publicidad.ObtenerPublicidadesXFechayDesig(anual.ToString(), hoy.ToString(), txtDesigCatastral.Text);
+                int total = CalcularImporte(tabla1);
+                res = AddRowEstadistica(res, "1 Año", total);
+
+            };
+
+
+            if (chkOtro.Checked)
+            {
+                if (txtDiasOtro.Text != "")
+                {
+                    DateTime diasSelect = hoy.AddYears(int.Parse(txtDiasOtro.Text) * -1);
+                    DataTable tabla3 = AD_Publicidad.ObtenerPublicidadesXFechayDesig(diasSelect.ToString(), hoy.ToString(), txtDesigCatastral.Text);
+                    int total = CalcularImporte(tabla3);
+                    res = AddRowEstadistica(res, (txtDiasOtro.Text + " Años"), total);
+                }
+                else
+                {
+                    MessageBox.Show("Se debe completar el campo de cantidad de años para continuar");
+                    txtDiasOtro.Focus();
+                }
+
+            };
+
+            if (rdTotal.Checked)
+            {
+                DateTime tot = hoy.AddYears(-200);
+                DataTable tabla2 = AD_Publicidad.ObtenerPublicidadesXFechayDesig(tot.ToString(), hoy.ToString(), txtDesigCatastral.Text);
+                int total = CalcularImporte(tabla2);
+                res = AddRowEstadistica(res, "Gasto Total Historico", total);
+
+
+            };
+
+            return res;
+        }
+
         private DataTable AddRowEstadistica(DataTable res, string rango, int gasto)
         {
             DataRow drow = res.NewRow();
