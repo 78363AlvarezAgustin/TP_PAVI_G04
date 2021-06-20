@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ConjuntoDeDatos\EstadisticaGastosPublicitariosXPropiedad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EstadisticaGastosPublicitariosXPropiedad.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatosEstadisticaImportePublicidadXIdMedio.cs">
       <DependentUpon>DatosEstadisticaImportePublicidadXIdMedio.xsd</DependentUpon>
     </Compile>
@@ -766,6 +771,9 @@
     <EmbeddedResource Include="Formularios\FrmReportesListados\ListDeEdificiosPorBarrio.resx">
       <DependentUpon>ListDeEdificiosPorBarrio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmReportesListados\RepDePublicidadesEnRangoDeFechas.resx">
+      <DependentUpon>RepDePublicidadesEnRangoDeFechas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmReportesListados\RepEmpleadosPorBarrio.resx">
       <DependentUpon>RepEmpleadosPorBarrio.cs</DependentUpon>
     </EmbeddedResource>
@@ -809,6 +817,17 @@
     <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xss">
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </None>
+    <None Include="ConjuntoDeDatos\EstadisticaGastosPublicitariosXPropiedad.xsc">
+      <DependentUpon>EstadisticaGastosPublicitariosXPropiedad.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\EstadisticaGastosPublicitariosXPropiedad.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EstadisticaGastosPublicitariosXPropiedad.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\EstadisticaGastosPublicitariosXPropiedad.xss">
+      <DependentUpon>EstadisticaGastosPublicitariosXPropiedad.xsd</DependentUpon>
+    </None>
     <None Include="DataSetFacturasOperaciones.xsc">
       <DependentUpon>DataSetFacturasOperaciones.xsd</DependentUpon>
     </None>
@@ -821,6 +840,7 @@
       <DependentUpon>DataSetFacturasOperaciones.xsd</DependentUpon>
     </None>
     <EmbeddedResource Include="ListDeEdificiosPorBarrio.rdlc" />
+    <EmbeddedResource Include="EstadisticaGastosPublicitarios.rdlc" />
     <EmbeddedResource Include="ReporteClientesPorLocalidad.rdlc" />
     <EmbeddedResource Include="ReporteDptosXExpensas.rdlc" />
     <EmbeddedResource Include="RVPropTipo.rdlc" />
@@ -915,9 +935,7 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_user-group_285648.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConjuntoDeDatos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>

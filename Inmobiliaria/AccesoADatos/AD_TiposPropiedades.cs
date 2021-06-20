@@ -163,5 +163,43 @@ namespace Inmobiliaria.AccesoADatos
             return res;
 
         }
+        public static DataTable ObtenerTiposPropiedadesXid(int id)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT * FROM tipos_propiedades WHERE id_tipo_propiedad = @tipoProp";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@tipoProp", id);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
     }
 }

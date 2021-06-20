@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EstadisticaGastosPublicitariosXPropiedad" targetNamespace="http://tempuri.org/EstadisticaGastosPublicitariosXPropiedad.xsd" xmlns:mstns="http://tempuri.org/EstadisticaGastosPublicitariosXPropiedad.xsd" xmlns="http://tempuri.org/EstadisticaGastosPublicitariosXPropiedad.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EstadisticaGastosPublicitariosXPropiedad" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EstadisticaGastosPublicitariosXPropiedad" msprop:Generator_UserDSName="EstadisticaGastosPublicitariosXPropiedad">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GastoPublicitarioProp" msprop:Generator_TableClassName="GastoPublicitarioPropDataTable" msprop:Generator_TableVarName="tableGastoPublicitarioProp" msprop:Generator_TablePropName="GastoPublicitarioProp" msprop:Generator_RowDeletingName="GastoPublicitarioPropRowDeleting" msprop:Generator_RowChangingName="GastoPublicitarioPropRowChanging" msprop:Generator_RowEvHandlerName="GastoPublicitarioPropRowChangeEventHandler" msprop:Generator_RowDeletedName="GastoPublicitarioPropRowDeleted" msprop:Generator_UserTableName="GastoPublicitarioProp" msprop:Generator_RowChangedName="GastoPublicitarioPropRowChanged" msprop:Generator_RowEvArgName="GastoPublicitarioPropRowChangeEvent" msprop:Generator_RowClassName="GastoPublicitarioPropRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RangoTiempo" msprop:Generator_ColumnVarNameInTable="columnRangoTiempo" msprop:Generator_ColumnPropNameInRow="RangoTiempo" msprop:Generator_ColumnPropNameInTable="RangoTiempoColumn" msprop:Generator_UserColumnName="RangoTiempo" type="xs:string" minOccurs="0" />
+              <xs:element name="GastoPublicitario" msprop:Generator_ColumnVarNameInTable="columnGastoPublicitario" msprop:Generator_ColumnPropNameInRow="GastoPublicitario" msprop:Generator_ColumnPropNameInTable="GastoPublicitarioColumn" msprop:Generator_UserColumnName="GastoPublicitario" type="xs:unsignedLong" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
