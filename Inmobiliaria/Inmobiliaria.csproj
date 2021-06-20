@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BD3K7G04_2021DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosComisionesMensuales.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosComisionesMensuales.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.cs">
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </Compile>
@@ -581,6 +586,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="ComisionesTotalesMensuales.rdlc" />
     <EmbeddedResource Include="DatosExpensasMensuales.rdlc" />
     <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
     <EmbeddedResource Include="EstadisticasPorEmpleado.rdlc" />
@@ -798,6 +804,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ConjuntoDeDatos\DatosComisionesMensuales.xsc">
+      <DependentUpon>DatosComisionesMensuales.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosComisionesMensuales.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosComisionesMensuales.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosComisionesMensuales.xss">
+      <DependentUpon>DatosComisionesMensuales.xsd</DependentUpon>
+    </None>
     <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xsc">
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </None>
@@ -915,9 +932,7 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_user-group_285648.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ConjuntoDeDatos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
   </ItemGroup>
