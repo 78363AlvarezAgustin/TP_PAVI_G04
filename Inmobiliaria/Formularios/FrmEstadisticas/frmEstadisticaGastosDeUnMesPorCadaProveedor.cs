@@ -21,8 +21,7 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
 
         private void frmEstadisticaGastosDeUnMesPorCadaProveedor_Load(object sender, EventArgs e)
         {
-
-            this.rpGastosProv.RefreshReport();
+            txtMes.Focus();
         }
 
         private void btnFiltrar_Click(object sender, EventArgs e)
@@ -44,6 +43,11 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
                 rpGastosProv.LocalReport.DataSources.Add(ds);
                 this.rpGastosProv.RefreshReport();
             }
+        }
+
+        private void rpGastosProv_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

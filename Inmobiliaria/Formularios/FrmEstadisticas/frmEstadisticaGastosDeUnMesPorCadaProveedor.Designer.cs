@@ -83,6 +83,7 @@ namespace Inmobiliaria.Formularios.FrmEstadisticas
             this.rpGastosProv.ServerReport.BearerToken = null;
             this.rpGastosProv.Size = new System.Drawing.Size(680, 351);
             this.rpGastosProv.TabIndex = 12;
+            this.rpGastosProv.Load += new System.EventHandler(this.rpGastosProv_Load);
             // 
             // frmEstadisticaGastosDeUnMesPorCadaProveedor
             // 
