@@ -241,5 +241,43 @@ namespace Inmobiliaria.AccesoADatos
             }
             return resultado;
         }
+
+        public static DataTable ObtenerGastosPorMes(int mes)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT id_proveedor as PROVEEDOR, sum(importe) as GASTO FROM gastos WHERE month(fecha) = @mes GROUP BY id_proveedor";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@mes", mes);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+
+            }
+        }
+
     }
 }
