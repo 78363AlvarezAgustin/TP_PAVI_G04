@@ -112,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ConjuntoDeDatos\DatosFacturasMediosPago.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatosFacturasMediosPago.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ConjuntoDeDatos\DatosGastosProv.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -599,6 +604,7 @@
     <EmbeddedResource Include="ComisionesTotalesMensuales.rdlc" />
     <EmbeddedResource Include="DatosExpensasMensuales.rdlc" />
     <EmbeddedResource Include="EmpleadosPorBarrio.rdlc" />
+    <EmbeddedResource Include="EstadisticaFacturasMedioPago.rdlc" />
     <EmbeddedResource Include="EstadisticaProvGastos.rdlc" />
     <EmbeddedResource Include="EstadisticasPorEmpleado.rdlc" />
     <EmbeddedResource Include="EstadisticaTotalImporteXMedioPublic.rdlc" />
@@ -839,6 +845,17 @@
     </None>
     <None Include="ConjuntoDeDatos\DatosEmpleadosPorBarrio.xss">
       <DependentUpon>DatosEmpleadosPorBarrio.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosFacturasMediosPago.xsc">
+      <DependentUpon>DatosFacturasMediosPago.xsd</DependentUpon>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosFacturasMediosPago.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatosFacturasMediosPago.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ConjuntoDeDatos\DatosFacturasMediosPago.xss">
+      <DependentUpon>DatosFacturasMediosPago.xsd</DependentUpon>
     </None>
     <None Include="ConjuntoDeDatos\DatosGastosProv.xsc">
       <DependentUpon>DatosGastosProv.xsd</DependentUpon>
