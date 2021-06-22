@@ -228,6 +228,74 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
 
             }
         }
+        public static DataTable ObtenerFacturasMediosPago()
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
 
+                string consulta = "SELECT mp.n_medio_pago as Nombre, SUM(f.total_comision) as Total FROM facturas f inner join medios_pago mp on f.id_medio_pago = mp.id_medio_pago GROUP BY mp.n_medio_pago";
+
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+
+        }
+        public static DataTable ObtenerFacturasMediosPagoPorFecha(string desde, string hasta)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT mp.n_medio_pago as Nombre, SUM(f.total_comision) as Total FROM facturas f inner join medios_pago mp on f.id_medio_pago = mp.id_medio_pago WHERE f.fecha BETWEEN @desde AND @hasta GROUP BY mp.n_medio_pago";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@desde", desde);
+                cmd.Parameters.AddWithValue("@hasta", hasta);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
     }
 }
