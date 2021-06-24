@@ -179,7 +179,7 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
             {
                 SqlCommand cmd = new SqlCommand();
 
-                string consulta = "SELECT MONTH(fecha_cobro) as 'Mes', SUM(importe) as 'Importe Total' FROM recibos WHERE YEAR(fecha_cobro) = @año GROUP BY MONTH(fecha_cobro)";
+                string consulta = "SELECT MONTH(fecha_cobro) as 'Mes', SUM(importe) as 'Importe' FROM [BD3K7G04_2021].[dbo].[recibos] WHERE YEAR(fecha_cobro) = @año GROUP BY MONTH(fecha_cobro)";
 
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@año", año);
