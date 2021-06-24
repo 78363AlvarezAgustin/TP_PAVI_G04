@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DatosRecibosMensuales" targetNamespace="http://tempuri.org/DatosRecibosMensuales.xsd" xmlns:mstns="http://tempuri.org/DatosRecibosMensuales.xsd" xmlns="http://tempuri.org/DatosRecibosMensuales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DatosRecibosMensuales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatosRecibosMensuales" msprop:Generator_UserDSName="DatosRecibosMensuales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TablaRecibosMensuales" msprop:Generator_TableClassName="TablaRecibosMensualesDataTable" msprop:Generator_TableVarName="tableTablaRecibosMensuales" msprop:Generator_TablePropName="TablaRecibosMensuales" msprop:Generator_RowDeletingName="TablaRecibosMensualesRowDeleting" msprop:Generator_RowChangingName="TablaRecibosMensualesRowChanging" msprop:Generator_RowEvHandlerName="TablaRecibosMensualesRowChangeEventHandler" msprop:Generator_RowDeletedName="TablaRecibosMensualesRowDeleted" msprop:Generator_UserTableName="TablaRecibosMensuales" msprop:Generator_RowChangedName="TablaRecibosMensualesRowChanged" msprop:Generator_RowEvArgName="TablaRecibosMensualesRowChangeEvent" msprop:Generator_RowClassName="TablaRecibosMensualesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:int" minOccurs="0" />
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

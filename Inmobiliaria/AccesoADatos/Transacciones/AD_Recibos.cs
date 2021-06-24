@@ -73,7 +73,7 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
                 return utlimoId;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return 0;
             }
@@ -168,6 +168,41 @@ namespace Inmobiliaria.AccesoADatos.Transacciones
             {
                 cn.Close();
 
+            }
+        }
+        public static DataTable ObtenerRecibosPorAño(int año)
+        {
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+
+                string consulta = "SELECT MONTH(fecha_cobro) as 'Mes', SUM(importe) as 'Importe' FROM [BD3K7G04_2021].[dbo].[recibos] WHERE YEAR(fecha_cobro) = @año GROUP BY MONTH(fecha_cobro)";
+
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@año", año);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+
+                return tabla;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                cn.Close();
             }
         }
     }
